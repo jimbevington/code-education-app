@@ -1,0 +1,19 @@
+GAME
+  GRID
+    Cell
+    Cell
+    Cell
+    Cell
+    Cell
+    Cell
+    Cell
+    Cell
+    Cell
+    Cell
+
+each Cell has an Index
+
+
+Game :-
+
+  cells = []
