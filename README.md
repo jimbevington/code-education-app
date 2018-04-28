@@ -8,7 +8,7 @@ To get up and running:
 
 - still in terminal enter: PORT=3001 npm start
 
-- in another terminal tab enter cd into kidz_who_code_frontend/client
+- in another terminal tab cd into kidz_who_code_frontend/client
 
 - npm start
 
