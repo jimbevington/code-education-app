@@ -18,8 +18,8 @@ class App extends Component {
         <h1>Facts</h1>
         <ul>
           {this.state.facts.map(fact =>
-            <div>
-              <li key={fact.id}>{fact.question}</li>
+            <div key={fact.id}>
+              <li>{fact.question}</li>
               <li>{fact.answer}</li>
             </div>
           )}
