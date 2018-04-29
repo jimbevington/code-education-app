@@ -1,5 +1,6 @@
 import React from 'react';
 import Cell from './Cell';
+import './Grid.css';
 
 const Grid = (props) => {
 
@@ -7,17 +8,17 @@ const Grid = (props) => {
 
   return  (
     <React.Fragment>
-      <div>
+      <div className='row'>
         <Cell />
         <Cell />
         <Cell />
       </div>
-      <div>
+      <div className='row'>
         <Cell />
         <Cell />
         <Cell />
       </div>
-      <div>
+      <div className='row'>
         <Cell />
         <Cell />
         <Cell />
