@@ -1,0 +1,13 @@
+.cell {
+  float: left;
+  width: 150px;
+  height: 150px;
+  line-height: 100px;
+  font-size: 3em;
+  font-weight: 100;
+  border: 1px solid black;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+}

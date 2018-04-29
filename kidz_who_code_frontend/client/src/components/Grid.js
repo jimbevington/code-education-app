@@ -1,7 +1,29 @@
 import React from 'react';
+import Cell from './Cell';
 
 const Grid = (props) => {
-  return <h1>This is the grid</h1>
+
+  // do this as a method eventually, this is a test
+
+  return  (
+    <React.Fragment>
+      <div>
+        <Cell />
+        <Cell />
+        <Cell />
+      </div>
+      <div>
+        <Cell />
+        <Cell />
+        <Cell />
+      </div>
+      <div>
+        <Cell />
+        <Cell />
+        <Cell />
+      </div>
+  </React.Fragment>
+  )
 }
 
 export default Grid;
