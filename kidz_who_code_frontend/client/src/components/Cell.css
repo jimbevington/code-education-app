@@ -1,9 +1,9 @@
 .cell {
   float: left;
-  width: 150px;
-  height: 150px;
-  line-height: 100px;
-  font-size: 3em;
+  width: 40px;
+  height: 40px;
+  /* line-height: 100px; */
+  font-size: 1em;
   font-weight: 100;
   border: 1px solid black;
   margin-right: -1px;

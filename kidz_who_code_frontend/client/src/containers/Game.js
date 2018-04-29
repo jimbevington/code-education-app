@@ -13,7 +13,7 @@ class Game extends React.Component {
   }
 
   render(){
-    return <Grid />
+    return <Grid squaredSize={6}/>
   }
 }
 

@@ -5,25 +5,24 @@ import './Grid.css';
 const Grid = (props) => {
 
   // do this as a method eventually, this is a test
+  let cells = [];
+
+  for (let i = 0; i < props.squaredSize; i++){
+    const row = [];
+    for (let j = 0; j < props.squaredSize; j++){
+      row.push(<Cell key={j} />);
+    }
+    cells.push(
+      <div className='row' key={i}>
+        {row}
+      </div>
+    )
+  }
 
   return  (
     <React.Fragment>
-      <div className='row'>
-        <Cell />
-        <Cell />
-        <Cell />
-      </div>
-      <div className='row'>
-        <Cell />
-        <Cell />
-        <Cell />
-      </div>
-      <div className='row'>
-        <Cell />
-        <Cell />
-        <Cell />
-      </div>
-  </React.Fragment>
+      {cells}
+    </React.Fragment>
   )
 }
 
