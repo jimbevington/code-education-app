@@ -1,4 +1,5 @@
 import React from 'react';
+import Grid from '../components/Grid';
 
 class Game extends React.Component {
   constructor(props){
@@ -12,7 +13,7 @@ class Game extends React.Component {
   }
 
   render(){
-    return <h1>This is the Game</h1>
+    return <Grid />
   }
 }
 
