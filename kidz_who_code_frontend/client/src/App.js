@@ -29,6 +29,7 @@ class App extends Component {
 
         <ul>
 
+
           {this.state.facts[0].info.map(fact =>
           <div key={fact.id}>
           <li>{fact.question}</li>
@@ -46,6 +47,7 @@ class App extends Component {
 
 );
 }
+
 
 }
 
