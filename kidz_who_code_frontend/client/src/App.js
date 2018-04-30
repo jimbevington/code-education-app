@@ -28,25 +28,34 @@ class App extends Component {
         <Fact facts ={this.state.facts}/>
 
         <ul>
-
-
           {this.state.facts[0].info.map(fact =>
-          <div key={fact.id}>
-          <li>{fact.question}</li>
-          <li>{fact.answer}</li>
-        </div>
-      )}
-    </ul>
-    {/* Welcome */}
-    {/* FACTS */}
-    <Game squaredSize={6}/>
-    {/* QUIZ */}
-    {/* BYE */}
-  </div>
+            <div key={fact.id}>
+              <li>{fact.question}</li>
+              <li>{fact.answer}</li>
+            </div>
+          )}
+        </ul>
+
+        <ul>
+          {this.state.facts[1].q_and_a.map(element =>
+            <div key={element.id}>
+              <li>{element.question}</li>
+              <li>{element.correct_answer}</li>
+              <li>{element.incorrect_answer_1}</li>
+              <li>{element.incorrect_answer_2}</li>
+            </div>
+          )}
+        </ul>
+        {/* Welcome */}
+        {/* FACTS */}
+        <Game squaredSize={6}/>
+        {/* QUIZ */}
+        {/* BYE */}
+      </div>
 
 
-);
-}
+    );
+  }
 
 
 }

@@ -29,8 +29,6 @@ import Bug from "./Bug.js";
       <Order />
       <p>What are computer BUGS?</p>
       <Bug />
-
-
     </div>
   );
 

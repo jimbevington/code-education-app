@@ -33,40 +33,40 @@ router.get('/', function(req, res, next) {
             answer: "When your code doesn’t do what you want it to do, that’s a bug! Imagine you made a robot, and you want it to go forward when your press the up key, but instead the robot moves backwards - thats a bug! Bugs are nothing to be afraid of, they help us learn and allows us to make our code even better."
           }
         ]
-      // },
-      // {
-      //   q_and_a: [
-      //     { id: 1,
-      //       question: "What machine do you use to write code?",
-      //       correct_answer: "A computer",
-      //       incorrect_answer_1: "A television",
-      //       incorrect_answer_2: "A telephone"
-      //     },
-      //     { id: 2,
-      //       question: "What is code?",
-      //       correct_answer: "A set of rules or instructions which allows you to make things with your computer",
-      //       incorrect_answer_1: "A type of computer",
-      //       incorrect_answer_2: "A game"
-      //     },
-      //     { id: 3,
-      //       question: "What does code look like?",
-      //       correct_answer: "A set of rules or instructions made up of words, numbers and symbols",
-      //       incorrect_answer_1: "A load of numbers all jumbled together",
-      //       incorrect_answer_2: "You can’t see code, it’s invisible"
-      //     },
-      //     { id: 4,
-      //       question: "What is a computer bug?",
-      //       correct_answer: "This is when your code doesn’t work like it should",
-      //       incorrect_answer_1: "It looks like a spider and lives in your computer",
-      //       incorrect_answer_2: "There is no such thing as a computer bug"
-      //     },
-      //     { id: 5,
-      //       question: "Does it matter what order you type your code in?",
-      //       correct_answer: "Yes",
-      //       incorrect_answer_1: "No",
-      //       incorrect_answer_2: "Sometimes"
-      //     },
-        // ]
+      },
+      {
+        q_and_a: [
+          { id: 1,
+            question: "What machine do you use to write code?",
+            correct_answer: "A computer",
+            incorrect_answer_1: "A television",
+            incorrect_answer_2: "A telephone"
+          },
+          { id: 2,
+            question: "What is code?",
+            correct_answer: "A set of rules or instructions which allows you to make things with your computer",
+            incorrect_answer_1: "A type of computer",
+            incorrect_answer_2: "A game"
+          },
+          { id: 3,
+            question: "What does code look like?",
+            correct_answer: "A set of rules or instructions made up of words, numbers and symbols",
+            incorrect_answer_1: "A load of numbers all jumbled together",
+            incorrect_answer_2: "You can’t see code, it’s invisible"
+          },
+          { id: 4,
+            question: "What is a computer bug?",
+            correct_answer: "This is when your code doesn’t work like it should",
+            incorrect_answer_1: "It looks like a spider and lives in your computer",
+            incorrect_answer_2: "There is no such thing as a computer bug"
+          },
+          { id: 5,
+            question: "Does it matter what order you type your code in?",
+            correct_answer: "Yes",
+            incorrect_answer_1: "No",
+            incorrect_answer_2: "Sometimes"
+          }
+        ]
       }
     ]
   );
