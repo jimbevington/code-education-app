@@ -136,20 +136,18 @@ class Game extends React.Component {
       <React.Fragment>
         <Heading text="Take Divvy Home!" />
         <InfoBox text="Here are some instructions." />
-        <Grid
-          squaredSize={this.props.squaredSize} cellStates={this.state.cellStates}
-        />
-        <MovesContainer
-          squaredSize={this.props.squaredSize}
-          handleMoveListClick={this.addMove}
-          moveList={this.state.moveDirList}
-        />
-        {/* <MovesList
-          squaredSize={this.props.squaredSize}
-          handleMoveClick={this.addMove}
-        />
-        <MoveBoard moves={this.state.moveDirList} /> */}
-        <Go handleClick={this.handleMove}/>
+        <div className='game-container'>
+          <Grid
+            squaredSize={this.props.squaredSize} cellStates={this.state.cellStates}
+          />
+          <MovesContainer
+            squaredSize={this.props.squaredSize}
+            handleMoveListClick={this.addMove}
+            moveList={this.state.moveDirList}
+            handleGoClick={this.handleMove}
+          />
+          {/* <Go handleClick={this.handleMove}/> */}
+        </div>
       </React.Fragment>
     )
   }
