@@ -3,7 +3,7 @@ import './Cell.css';
 
 const Cell = (props) => {
   return (
-    <p className='cell'>cell</p>
+    <div className='cell'>cell</div>
   )
 }
 
