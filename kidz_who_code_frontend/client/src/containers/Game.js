@@ -13,7 +13,8 @@ class Game extends React.Component {
       cellStates: [],
       goalPosition: null,
       playerPosition: null,
-      moveList: []
+      moveList: [],
+      moveDirList: []
     }
     this.handleMove = this.handleMove.bind(this);
     this.addMove = this.addMove.bind(this);
@@ -55,7 +56,9 @@ class Game extends React.Component {
     event.preventDefault();
     const updatedMoves = this.state.moveList;
     updatedMoves.push(event.target.value);
-    this.setState({moveList: updatedMoves});
+    const updatedDirMoves = this.state.moveDirList;
+    updatedDirMoves.push(event.target.getAttribute('direction'));
+    this.setState({moveList: updatedMoves, moveDirList: updatedDirMoves});
   }
 
   handleMove(){
@@ -70,7 +73,7 @@ class Game extends React.Component {
           handleMoveClick={this.addMove}
         />
         <Grid squaredSize={this.props.squaredSize} cellStates={this.state.cellStates}/>
-        <MoveBoard moves={this.state.moveList} />
+        <MoveBoard moves={this.state.moveDirList} />
         <Go handleClick={this.handleMove}/>
       </React.Fragment>
     )

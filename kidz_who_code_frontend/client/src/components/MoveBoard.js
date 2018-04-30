@@ -1,12 +1,13 @@
 import React from 'react';
+import './MoveBoard.css';
 
 const MoveBoard = (props) => {
-  const moves = props.moves.forEach((move, index) => {
-    return <li>{index}: {move}</li>
+  const moves = props.moves.map((move, index) => {
+    return <li key={index}>{move}</li>
   });
 
   return (
-    <ul>
+    <ul className='move-board'>
       {moves}
     </ul>
   )

@@ -5,6 +5,7 @@ const Move = (props) => {
    <button
     onClick={props.handleClick}
     value={props.moveValue}
+    direction={props.direction}
     >
     {props.direction}
   </button>
