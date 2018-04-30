@@ -62,7 +62,7 @@ class Game extends React.Component {
     }
 
     const updatedMoves = this.state.moveList;
-    updatedMoves.push(event.target.value);
+    updatedMoves.push(event.target.getAttribute('value'));
     const updatedDirMoves = this.state.moveDirList;
     updatedDirMoves.push(event.target.getAttribute('direction'));
     this.setState({moveList: updatedMoves, moveDirList: updatedDirMoves});
