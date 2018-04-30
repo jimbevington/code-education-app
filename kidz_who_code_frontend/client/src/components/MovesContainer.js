@@ -17,12 +17,12 @@ const MovesContainer = (props) => {
       />
       <Move
         direction="left"
-        moveValue={1}
+        moveValue={-1}
         handleClick={props.handleMoveClick}
       />
       <Move
         direction="right"
-        moveValue={-1}
+        moveValue={1}
         handleClick={props.handleMoveClick}
       />
     </div>

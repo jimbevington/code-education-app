@@ -3,6 +3,7 @@ import Grid from '../components/Grid';
 import MovesContainer from '../components/MovesContainer'
 import MoveBoard from '../components/MoveBoard';
 import Go from '../components/Go';
+import Heading from '../components/Heading';
 
 class Game extends React.Component {
   constructor(props){
@@ -35,7 +36,7 @@ class Game extends React.Component {
     this.setState({playerPosition: playerStart,
                    goalPosition: goalStart,
                    cellStates: updatedCellStates
-                 }, console.log(this.state.cellStates));
+                 });
   }
 
   generateGridPos = () => {
@@ -54,6 +55,11 @@ class Game extends React.Component {
 
   addMove(event){
     event.preventDefault();
+    // stop here if game is won
+    if(this.state.isWon){
+      return;
+    }
+
     const updatedMoves = this.state.moveList;
     updatedMoves.push(event.target.value);
     const updatedDirMoves = this.state.moveDirList;
@@ -68,39 +74,67 @@ class Game extends React.Component {
     }
 
     let updatedCellState = this.state.cellStates;
-    let playerPosition = this.state.playerPosition;
-    console.log(playerPosition);
-    // clear Player position
-    updatedCellState[playerPosition] = null;
+    let currentPosition = this.state.playerPosition;
 
-    for (let move of this.state.moveList){
-      playerPosition += parseInt(move, 10);
-    }
-    
+    // clear Player position
+    updatedCellState[currentPosition] = null;
+
+    const updatedPlayerPosition = this.evaluateMoves(currentPosition);
+
+    updatedCellState[updatedPlayerPosition] = 'player';
+
+    // update State: playerPosition, cellStates, moveList, moveDirlist
+    this.setState({cellStates: updatedCellState,
+                   playerPosition: updatedPlayerPosition,
+                   moveList: [],
+                   moveDirList: []
+                 }, this.checkWon);
   }
 
-  // move Player() {
-  //   clearPlayerCell()
-  //   playerPosition += move
-  //   updateCellState()
-  // }
-  //
-  // checkWon(){
-  //   if (playerPosition == goalPosition){
-  //       setState isWon to true
-  //       goalPosition == null  // may not be necessary
-  //       declareWon()
-  //   }
-  // }
-  //
-  // clearPlayerCell(){
-  //   newStates = cellStates[playerPosition] == null;
-  //   setStates({cellStates: newStates});
-  // }
+  evaluateMoves(playerPosition){
+    // have a new pos var
+    let updatedPos = playerPosition;
+
+    // loop through all the moves
+    for (let move of this.state.moveList){
+      const intMove = parseInt(move, 10);
+      // set controls based on
+      const atLeftBoundary = updatedPos % this.props.squaredSize === 0;
+      const atRightBoundary = (updatedPos + 1) % this.props.squaredSize === 0;
+      // debugger;
+      // skip move if Player can't move LEFT
+      if(atLeftBoundary && intMove === -1){
+        continue;
+      }
+      // skip move if Player can't move RIGHT
+      if(atRightBoundary && intMove === 1){
+        continue;
+      }
+      // calculate what the new Position will be
+      const newPos = updatedPos + intMove;
+      // update the Position if in range of the board
+      if(newPos < this.state.gridSize && newPos >= 0){
+        updatedPos = newPos;
+      }
+    }
+
+    return updatedPos;
+  }
+
+  checkWon(){
+    if (this.state.playerPosition === this.state.goalPosition){
+      this.setState({isWon: true}, this.declareWinner);
+    }
+  }
+
+  declareWinner(){
+    console.log('you won!');
+  }
 
   render(){
     return (
       <React.Fragment>
+        <Heading text="Take Divvy Home!" />
         <MovesContainer
           squaredSize={this.props.squaredSize}
           handleMoveClick={this.addMove}
