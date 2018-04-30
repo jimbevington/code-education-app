@@ -16,7 +16,7 @@ class Game extends React.Component {
   render(){
     return (
       <React.Fragment>
-        <MovesContainer />
+        {/* <MovesContainer squaredSize={6}/> */}
         <Grid squaredSize={6} cellStates={this.state.cellStates}/>
       </React.Fragment>
     )

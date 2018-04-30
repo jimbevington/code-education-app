@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Move = (props) => {
-  return <div>This is a move</div>
+  return <div>{props.direction}</div>
 }
 
 export default Move;

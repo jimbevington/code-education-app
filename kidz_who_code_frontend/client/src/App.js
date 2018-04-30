@@ -24,7 +24,11 @@ class App extends Component {
             </div>
           )}
         </ul>
+        {/* Welcome */}
+        {/* FACTS */}
         <Game />
+        {/* QUIZ */}
+        {/* BYE */}
       </div>
 
     );
