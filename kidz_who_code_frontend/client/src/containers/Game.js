@@ -20,13 +20,19 @@ class Game extends React.Component {
   componentDidMount(){
     // generate a random player position
     const playerStart = this.generateGridPos();
-    this.setState({playerPosition: playerStart});
     // generate a random goal position
     const goalStart = this.generateGoalPosition(playerStart);
-    console.log(playerStart, goalStart);
-    // make updated cellStates
-    // setState of cellStates
 
+    // put Player and goal into cellStates
+    let updatedCellStates = this.state.cellStates;
+    updatedCellStates[playerStart] = 'player';
+    updatedCellStates[goalStart] = 'goal';
+
+    // update the State
+    this.setState({playerPosition: playerStart,
+                   goalPosition: goalStart,
+                   cellStates: updatedCellStates
+                 }, console.log(this.state.cellStates));
   }
 
   generateGridPos = () => {
