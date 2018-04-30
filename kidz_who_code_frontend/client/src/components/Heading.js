@@ -1,7 +1,13 @@
 import React from 'react';
+import './Heading.css';
 
 const Heading = (props) => {
-  return <h1>{props.text}</h1>
+  return(
+    <div>
+    <h1>{props.text}</h1>
+<p>This is a font test</p>
+</div>
+)
 }
 
 export default Heading;
