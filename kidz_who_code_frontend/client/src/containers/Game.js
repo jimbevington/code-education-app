@@ -1,5 +1,7 @@
 import React from 'react';
 import Grid from '../components/Grid';
+import MovesContainer from '../components/MovesContainer'
+import Go from '../components/Go'
 import Heading from '../components/Heading';
 import InfoBox from '../components/InfoBox';
 import './Game.css';
@@ -112,7 +114,7 @@ class Game extends React.Component {
       // calculate what the new Position will be
       const newPos = updatedPos + intMove;
       // update the Position if in range of the board
-      if(newPos <= this.state.gridSize && newPos >= 0){
+      if(newPos < this.state.gridSize && newPos >= 0){
         updatedPos = newPos;
       }
     }
@@ -143,9 +145,9 @@ class Game extends React.Component {
             squaredSize={this.props.squaredSize}
             handleMoveListClick={this.addMove}
             moveList={this.state.moveDirList}
-            handleGoClick={this.handleMove}
           />
         </div>
+        <Go handleClick={this.handleMove}/>
       </React.Fragment>
     )
   }
