@@ -74,10 +74,9 @@ class Game extends React.Component {
     updatedCellState[playerPosition] = null;
 
     for (let move of this.state.moveList){
-      playerPosition += parseInt(move);
+      playerPosition += parseInt(move, 10);
     }
-
-    console.log(playerPosition);
+    
   }
 
   // move Player() {
