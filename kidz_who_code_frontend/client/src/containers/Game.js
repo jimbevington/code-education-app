@@ -68,15 +68,55 @@ class Game extends React.Component {
     }
 
     let updatedCellState = this.state.cellStates;
-    let playerPosition = this.state.playerPosition;
-    console.log(playerPosition);
-    // clear Player position
-    updatedCellState[playerPosition] = null;
+    let currentPosition = this.state.playerPosition;
 
+    // clear Player position
+    updatedCellState[currentPosition] = null;
+
+    const updatedPlayerPosition = this.evaluateMoves(currentPosition);
+
+
+
+    updatedCellState[updatedPlayerPosition] = 'player';
+
+    // update State: playerPosition, cellStates, moveList, moveDirlist
+    this.setState({cellStates: updatedCellState,
+                   playerPosition: updatedPlayerPosition,
+                   moveList: [],
+                   moveDirList: []
+                 });
+    // then checkWon
+
+  }
+
+  evaluateMoves(playerPosition){
+    // have a new pos var
+    let updatedPos = playerPosition;
+
+    // loop through all the moves
     for (let move of this.state.moveList){
-      playerPosition += parseInt(move, 10);
+      const intMove = parseInt(move, 10);
+      // set controls based on
+      const atLeftBoundary = updatedPos % this.props.squaredSize === 0;
+      const atRightBoundary = (updatedPos + 1) % this.props.squaredSize === 0;
+      // debugger;
+      // skip move if Player can't move LEFT
+      if(atLeftBoundary && intMove === -1){
+        continue;
+      }
+      // skip move if Player can't move RIGHT
+      if(atRightBoundary && intMove === 1){
+        continue;
+      }
+      // calculate what the new Position will be
+      const newPos = updatedPos + intMove;
+      // update the Position if in range of the board
+      if(newPos < this.state.gridSize && newPos >= 0){
+        updatedPos = newPos;
+      }
     }
-    
+
+    return updatedPos;
   }
 
   // move Player() {
