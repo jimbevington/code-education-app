@@ -1,6 +1,7 @@
 import React from 'react';
 import Grid from '../components/Grid';
 import MovesContainer from '../components/MovesContainer'
+import MoveBoard from '../components/MoveBoard';
 
 class Game extends React.Component {
   constructor(props){
@@ -9,7 +10,8 @@ class Game extends React.Component {
       isWon: false,
       cellStates: [],
       goalPosition: null,
-      playerPosition: null
+      playerPosition: null,
+      moveList: []
     }
   }
 
@@ -18,6 +20,7 @@ class Game extends React.Component {
       <React.Fragment>
         <MovesContainer squaredSize={this.props.squaredSize}/>
         <Grid squaredSize={this.props.squaredSize} cellStates={this.state.cellStates}/>
+        <MoveBoard moves={this.state.moveList}/>
       </React.Fragment>
     )
   }
