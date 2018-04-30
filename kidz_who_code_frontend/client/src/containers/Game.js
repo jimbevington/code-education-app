@@ -62,8 +62,42 @@ class Game extends React.Component {
   }
 
   handleMove(){
-    return <p>Move Handled</p>
+    // skip if no Moves
+    if(!this.state.moveList.length){
+      return;
+    }
+
+    let updatedCellState = this.state.cellStates;
+    let playerPosition = this.state.playerPosition;
+    console.log(playerPosition);
+    // clear Player position
+    updatedCellState[playerPosition] = null;
+
+    for (let move of this.state.moveList){
+      playerPosition += parseInt(move);
+    }
+
+    console.log(playerPosition);
   }
+
+  // move Player() {
+  //   clearPlayerCell()
+  //   playerPosition += move
+  //   updateCellState()
+  // }
+  //
+  // checkWon(){
+  //   if (playerPosition == goalPosition){
+  //       setState isWon to true
+  //       goalPosition == null  // may not be necessary
+  //       declareWon()
+  //   }
+  // }
+  //
+  // clearPlayerCell(){
+  //   newStates = cellStates[playerPosition] == null;
+  //   setStates({cellStates: newStates});
+  // }
 
   render(){
     return (
