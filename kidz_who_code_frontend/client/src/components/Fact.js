@@ -7,33 +7,31 @@ import Bug from "./Bug.js";
 
 // const Fact = (props) => (
 //   <div>
-//   {props.facts.map(fact =>
-//       <div key={fact.id}>
-//           <p>{fact.question}</p>
-//               <CompInfo facts={props.fact} />
-//
-//       </div>
-//
-//     )}
-// {/* {props.facts[1].answer} */}
+    {/* {props.facts.map(fact =>
+      <div key={fact.id}>
+      <p>{fact.question}</p>
+      <CompInfo facts={props.fact} />
+
+    </div>
+
+  )} */}
+
+  // {/* {props.facts[1].answer} */}
 
 
-const Fact = () => (
-<div>
-    <p>What is CODE?</p>
-    <CodeInfo />
-
-    <p>What does code LOOK like?</p>
-    <Code />
-
-    <p>Does code need to be in ORDER?</p>
-    <Order />
-
-    <p>What are computer BUGS?</p>
-    <Bug />
+  const Fact = () => (
+    <div>
+      <p>What is CODE?</p>
+      <CodeInfo />
+      <p>What does code LOOK like?</p>
+      <Code />
+      <p>Does code need to be in ORDER?</p>
+      <Order />
+      <p>What are computer BUGS?</p>
+      <Bug />
 
 
-  </div>
-);
+    </div>
+  );
 
-export default Fact;
+  export default Fact;

@@ -6,7 +6,7 @@ const CompInfo = (props) => (
     trigger={<button className="button"> Click Me! </button>}
     modal
     >
-      
+
       {close => (
         <div className="modal">
           <a className="close" onClick={close}>
