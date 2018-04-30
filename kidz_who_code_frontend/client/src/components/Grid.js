@@ -5,15 +5,20 @@ import './Grid.css';
 const Grid = (props) => {
 
   // do this as a method eventually, this is a test
-  let cells = [];
+  let grid = [];
 
+  // build grid
   for (let i = 0; i < props.squaredSize; i++){
+    // build as many rows as squaredSize
     const row = [];
+    // for each row, build as many cells as squaredSize
     for (let j = 0; j < props.squaredSize; j++){
-      row.push(<Cell key={j} />);
+      // give id counting from 0
+      row.push(<Cell key={j} id={j + (props.squaredSize * i)}/>);
     }
-    cells.push(
-      <div className='row' key={i}>
+    // add rows to grid
+    grid.push(
+      <div className='row' key={i} >
         {row}
       </div>
     )
@@ -21,7 +26,7 @@ const Grid = (props) => {
 
   return  (
     <React.Fragment>
-      {cells}
+      {grid}
     </React.Fragment>
   )
 }
