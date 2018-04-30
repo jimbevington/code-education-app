@@ -5,31 +5,20 @@ import Code from "./Code.js";
 import Order from "./Order.js";
 import Bug from "./Bug.js";
 
-// const Fact = (props) => (
-//   <div>
-    {/* {props.facts.map(fact =>
-      <div key={fact.id}>
-      <p>{fact.question}</p>
-      <CompInfo facts={props.fact} />
+const Fact = (props) => {
+  return (
+    <React.Fragment>
+      <h1>Facts</h1>
+      <ul>
+        {props.facts[0].info.map(fact =>
+          <div key={fact.id}>
+            <li>{fact.question}</li>
+            <li>{fact.answer}</li>
+          </div>
+        )}
+      </ul>
+    </React.Fragment>
+  )
+}
 
-    </div>
-
-  )} */}
-
-  // {/* {props.facts[1].answer} */}
-
-
-  const Fact = () => (
-    <div>
-      <p>What is CODE?</p>
-      <CodeInfo />
-      <p>What does code LOOK like?</p>
-      <Code />
-      <p>Does code need to be in ORDER?</p>
-      <Order />
-      <p>What are computer BUGS?</p>
-      <Bug />
-    </div>
-  );
-
-  export default Fact;
+export default Fact;
