@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Intro from './containers/Intro';
 import Game from './containers/Game';
+import Fact from './components/Fact';
 import './App.css';
 
 
@@ -18,14 +19,15 @@ class App extends Component {
       <div className="App">
         <Intro />
         <h1>Facts</h1>
-        <ul>
+        <Fact />
+        {/* <ul>
           {this.state.facts.map(fact =>
             <div key={fact.id}>
               <li>{fact.question}</li>
               <li>{fact.answer}</li>
             </div>
           )}
-        </ul>
+        </ul> */}
         {/* Welcome */}
         {/* FACTS */}
         <Game />
