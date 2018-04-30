@@ -4,6 +4,7 @@ import MovesContainer from '../components/MovesContainer'
 import MoveBoard from '../components/MoveBoard';
 import Go from '../components/Go';
 import Heading from '../components/Heading';
+import InfoBox from '../components/InfoBox';
 
 class Game extends React.Component {
   constructor(props){
@@ -135,6 +136,7 @@ class Game extends React.Component {
     return (
       <React.Fragment>
         <Heading text="Take Divvy Home!" />
+        <InfoBox text="Here are some instructions." />
         <MovesContainer
           squaredSize={this.props.squaredSize}
           handleMoveClick={this.addMove}
