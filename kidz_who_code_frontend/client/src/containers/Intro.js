@@ -9,10 +9,6 @@ class Intro extends React.Component {
       <div>
       <Heading text='Welcome to Kidz Who Code'/>
       <Welcome />
-        // Info
-        // Speech Bubble
-        // Enter Your Name form
-        // Down Arrow
       </div>
     )
   }
