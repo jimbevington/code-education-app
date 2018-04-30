@@ -72,3 +72,9 @@ Game :-
     newStates = cellStates[playerPosition] == null;
     setStates({cellStates: newStates});
   }
+
+
+TESTS -
+
+test random Player position in range of Grid
+test goal Position is always a certain distance from Player
