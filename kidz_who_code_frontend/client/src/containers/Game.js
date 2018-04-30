@@ -54,6 +54,11 @@ class Game extends React.Component {
 
   addMove(event){
     event.preventDefault();
+    // stop here if game is won
+    if(this.state.isWon){
+      return;
+    }
+
     const updatedMoves = this.state.moveList;
     updatedMoves.push(event.target.value);
     const updatedDirMoves = this.state.moveDirList;
