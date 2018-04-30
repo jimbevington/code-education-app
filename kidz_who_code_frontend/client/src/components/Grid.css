@@ -2,3 +2,7 @@
   display:table;
   background-image: url('./public/space-background.jpg');
 }
+
+.grid {
+  display: inline-block;
+}

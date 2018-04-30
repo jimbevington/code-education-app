@@ -4,6 +4,7 @@ import MovesContainer from '../components/MovesContainer'
 import Go from '../components/Go';
 import Heading from '../components/Heading';
 import InfoBox from '../components/InfoBox';
+import './Game.css';
 
 class Game extends React.Component {
   constructor(props){
