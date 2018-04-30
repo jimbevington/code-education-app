@@ -1,5 +1,6 @@
 import React from 'react';
 import Grid from '../components/Grid';
+import MovesContainer from '../components/MovesContainer'
 
 class Game extends React.Component {
   constructor(props){
@@ -13,7 +14,12 @@ class Game extends React.Component {
   }
 
   render(){
-    return <Grid squaredSize={6} cellStates={this.state.cellStates}/>
+    return (
+      <React.Fragment>
+        <MovesContainer />
+        <Grid squaredSize={6} cellStates={this.state.cellStates}/>
+      </React.Fragment>
+    )
   }
 }
 

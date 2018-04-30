@@ -14,7 +14,15 @@ GAME
     Player
     Goal
 
-    return img 
+    return img
+
+  Moves
+    Direction value= img=UP
+    Direction value= img=DOWN
+    Direction value= img=LEFT
+    Direction value= img=RIGHT
+  MoveBoard
+  Go!
 
 each Cell has an Index
 
