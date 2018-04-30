@@ -1,3 +1,4 @@
 .row {
   display:table;
+  background-image: url('./public/space-background.jpg');
 }

@@ -1,14 +1,14 @@
+fix Goal generation method
+
+show Player in each cell as moves are made
+
 Player swivels based on what direction it last moved
 
 generate Obstacles
 
 give Popup: You win
 
-have Arrows for Controls
-
 Give instructions
-
-have background image
 
 
 TESTS -
