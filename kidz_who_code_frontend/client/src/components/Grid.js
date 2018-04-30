@@ -4,10 +4,8 @@ import './Grid.css';
 
 const Grid = (props) => {
 
-  // do this as a method eventually, this is a test
   let grid = [];
 
-  // build grid
   for (let i = 0; i < props.squaredSize; i++){
     // build as many rows as squaredSize
     const row = [];

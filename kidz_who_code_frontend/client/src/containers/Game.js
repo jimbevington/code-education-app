@@ -16,6 +16,7 @@ class Game extends React.Component {
       moveList: []
     }
     this.handleMove = this.handleMove.bind(this);
+    this.addMove = this.addMove.bind(this);
   }
 
   componentDidMount(){
@@ -50,6 +51,10 @@ class Game extends React.Component {
     return goalPos;
   }
 
+  addMove(){
+    console.log("move added");
+  }
+
   handleMove(){
     return <p>Move Handled</p>
   }
@@ -57,9 +62,12 @@ class Game extends React.Component {
   render(){
     return (
       <React.Fragment>
-        <MovesContainer squaredSize={this.props.squaredSize}/>
+        <MovesContainer
+          squaredSize={this.props.squaredSize}
+          handleMoveClick={this.addMove}
+        />
         <Grid squaredSize={this.props.squaredSize} cellStates={this.state.cellStates}/>
-        <MoveBoard moves={this.state.moveList}/>
+        <MoveBoard moves={this.state.moveList} />
         <Go handleClick={this.handleMove}/>
       </React.Fragment>
     )
