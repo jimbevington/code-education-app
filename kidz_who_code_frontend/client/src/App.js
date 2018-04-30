@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Intro from './containers/Intro';
 import Game from './containers/Game';
+import Fact from './components/Fact';
 import './App.css';
 
 
@@ -23,6 +24,9 @@ class App extends Component {
       <div className="App">
         <Intro />
         <h1>Facts</h1>
+
+        <Fact facts ={this.state.facts}/>
+
         <ul>
 
           {this.state.facts[0].info.map(fact =>
@@ -42,6 +46,7 @@ class App extends Component {
 
 );
 }
+
 }
 
 export default App;
