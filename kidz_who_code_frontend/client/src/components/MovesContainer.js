@@ -1,5 +1,6 @@
 import React from 'react';
 import Move from './Move';
+import './MovesContainer.css';
 
 const MovesContainer = (props) => {
 

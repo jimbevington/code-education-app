@@ -1,0 +1,10 @@
+.moves-container {
+  background: grey;
+  width: 380px;
+  height: 100px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px;
+}

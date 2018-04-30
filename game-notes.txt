@@ -1,4 +1,5 @@
-Cell displays PLAYER & GOAL
+Player swivels based on what direction it last moved
+
 generate Obstacles
 
 give Popup: You win
