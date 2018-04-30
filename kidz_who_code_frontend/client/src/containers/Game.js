@@ -3,6 +3,7 @@ import Grid from '../components/Grid';
 import MovesContainer from '../components/MovesContainer'
 import MoveBoard from '../components/MoveBoard';
 import Go from '../components/Go';
+import Heading from '../components/Heading';
 
 class Game extends React.Component {
   constructor(props){
@@ -35,7 +36,7 @@ class Game extends React.Component {
     this.setState({playerPosition: playerStart,
                    goalPosition: goalStart,
                    cellStates: updatedCellStates
-                 }, console.log(this.state.cellStates));
+                 });
   }
 
   generateGridPos = () => {
@@ -121,12 +122,7 @@ class Game extends React.Component {
   }
 
   checkWon(){
-    console.log('checking won');
-  }
-
-
-  checkWon(){
-    if (this.state.playerPosition == this.state.goalPosition){
+    if (this.state.playerPosition === this.state.goalPosition){
       this.setState({isWon: true}, this.declareWinner);
     }
   }
@@ -138,6 +134,7 @@ class Game extends React.Component {
   render(){
     return (
       <React.Fragment>
+        <Heading text="Take Divvy Home!" />
         <MovesContainer
           squaredSize={this.props.squaredSize}
           handleMoveClick={this.addMove}
