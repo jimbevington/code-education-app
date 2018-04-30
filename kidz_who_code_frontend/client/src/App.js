@@ -22,7 +22,7 @@ class App extends Component {
       <div className="App">
         <Intro />
         {/* Welcome */}
-        <Fact facts ={this.state.facts}/>
+        <Fact facts={this.state.facts}/>
         <Game squaredSize={6}/>
         <Quiz facts={this.state.facts} />
         {/* BYE */}
