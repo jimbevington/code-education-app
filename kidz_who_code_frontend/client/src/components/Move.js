@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Move = (props) => {
-  return <div>{props.direction}</div>
+  return <button>{props.direction}</button>
 }
 
 export default Move;
