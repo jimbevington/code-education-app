@@ -24,6 +24,7 @@ class App extends Component {
         <Intro />
         <h1>Facts</h1>
         <ul>
+
           {this.state.facts[0].info.map(fact =>
           <div key={fact.id}>
           <li>{fact.question}</li>
@@ -37,6 +38,7 @@ class App extends Component {
     {/* QUIZ */}
     {/* BYE */}
   </div>
+
 
 );
 }
