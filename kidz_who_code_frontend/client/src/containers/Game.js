@@ -13,7 +13,7 @@ class Game extends React.Component {
   }
 
   render(){
-    return <Grid squaredSize={6}/>
+    return <Grid squaredSize={6} cellStates={this.state.cellStates}/>
   }
 }
 

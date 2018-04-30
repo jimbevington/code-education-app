@@ -14,7 +14,12 @@ const Grid = (props) => {
     // for each row, build as many cells as squaredSize
     for (let j = 0; j < props.squaredSize; j++){
       // give id counting from 0
-      row.push(<Cell key={j} id={j + (props.squaredSize * i)}/>);
+      let cellIndex = j + (props.squaredSize * i)
+      row.push(<Cell
+                key={j}
+                id={cellIndex} // not sure if necessary
+                value={props.cellStates[cellIndex]}
+              />);
     }
     // add rows to grid
     grid.push(
