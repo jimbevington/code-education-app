@@ -1,4 +1,17 @@
 body {
   background: linear-gradient(to bottom right, #54F2F2, #645E9D);
   background-repeat: no-repeat;
+  border: black solid;
+  padding: 100px;
+}
+
+#welcome {
+  border: 10px black solid;
+  padding: 40px;
+  background-color: #503047;
+}
+
+h1 {
+  font-family: Lobster;
+  text-align: center;
 }
