@@ -51,8 +51,11 @@ class Game extends React.Component {
     return goalPos;
   }
 
-  addMove(){
-    console.log("move added");
+  addMove(event){
+    event.preventDefault();
+    const updatedMoves = this.state.moveList;
+    updatedMoves.push(event.target.value);
+    this.setState({moveList: updatedMoves});
   }
 
   handleMove(){
