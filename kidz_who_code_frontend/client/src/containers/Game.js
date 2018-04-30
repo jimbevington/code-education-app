@@ -8,6 +8,7 @@ class Game extends React.Component {
   constructor(props){
     super(props);
     this.state = {
+      gridSize: (this.props.squaredSize ** 2) - 1,
       isWon: false,
       cellStates: [],
       goalPosition: null,
@@ -36,15 +37,15 @@ class Game extends React.Component {
   }
 
   generateGridPos = () => {
-    return Math.floor((Math.random() * this.props.squaredSize ** 2));
+    return Math.floor((Math.random() * this.state.gridSize));
   }
 
   generateGoalPosition = (posToAvoid) => {
     // const goalPos = generateGridPos();
     // make this more sophisticated LATER
     let goalPos = posToAvoid + (this.props.squaredSize * 1.5);
-    if (goalPos > this.props.squaredSize ** 2){
-      goalPos -= (this.props.squaredSize ** 2);
+    if (goalPos > this.state.gridSize){
+      goalPos -= this.state.gridSize;
     }
     return goalPos;
   }
