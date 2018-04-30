@@ -6,14 +6,13 @@ const CodeInfo = () => (
 <Popup
   trigger={<button className="button"> What is CODE? </button>}
   modal
-  // contentStyle={contentStyle}
 >
   {close => (
     <div className="modal">
       <a className="close" onClick={close}>
         &times;
       </a>
-      <div className="header"> Click Me! </div>
+      <div className="header"> What is CODE? </div>
       <div className="content">
         {" "}
         <br />

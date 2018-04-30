@@ -1,48 +1,46 @@
 import React from "react";
 import Popup from "reactjs-popup";
 
-
-
-
-const CompInfo = () => (
-
+const CompInfo = (props) => (
   <Popup
     trigger={<button className="button"> Click Me! </button>}
     modal
-  >
-    {close => (
-      <div className="modal">
-        <a className="close" onClick={close}>
-          &times;
-        </a>
-        <div className="header"> What is a COMPUTER? </div>
-        <div className="content">
-          {" "}
-          <br />
-          A computer is a type of machine which can follow instructions and do
-          lots of useful things. It doesn’t have a brain like you, but with code
-          you can tell it what you want it to do.
-          <br />
+    >
+      
+      {close => (
+        <div className="modal">
+          <a className="close" onClick={close}>
+            &times;
+          </a>
+          <div className="header"> What is a COMPUTER? </div>
+          <div className="content">
 
-        </div>
-
-          <button
-            className="button"
-            onClick={() => {
-              console.log("modal closed ");
-              close();
-            }}
-          >
-            Close
-          </button>
-        </div>
-
-    )}
-  </Popup>
-  );
+            <div>
+              {props.facts.map(fact =>
+                <div key={fact.id}>
+                  <p>{props.facts[0].answer}</p>
+                </div>
+              )}
 
 
+              <button
+                className="button"
+                onClick={() => {
+                  console.log("modal closed ");
+                  close();
+                }}
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+            // </div>
+          )}
+        </Popup>
+      );
 
 
 
-export default CompInfo;
+
+
+      export default CompInfo;

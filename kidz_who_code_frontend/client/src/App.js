@@ -19,7 +19,7 @@ class App extends Component {
       <div className="App">
         <Intro />
         <h1>Facts</h1>
-        <Fact />
+        <Fact facts ={this.state.facts}/>
         {/* <ul>
           {this.state.facts.map(fact =>
             <div key={fact.id}>
