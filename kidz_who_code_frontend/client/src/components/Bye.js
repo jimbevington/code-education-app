@@ -14,16 +14,18 @@ const Bye = () => {
   const bubbleContents = [wellDone, signUp];
 
   return (
-    <section id="bye page">
+    <section id="bye" className="page">
       <Arrow direction='upArrow' link='Quiz' />
-      <SpeechBubble paras={bubbleContents} width='300px'/>
-      <LinkImage
-        href="https://codeclan.com/"
-        img={codeclan}
-        alt="Codeclan Logo"
-        width='400px'
-      />
-      <Alien floatStyle="float-left"/>
+      <Alien floatStyle="float-none"/>
+      <section className='column' style={{'align-self': 'center'}}>
+        <SpeechBubble paras={bubbleContents} width='300px'/>
+        <LinkImage
+          href="https://codeclan.com/"
+          img={codeclan}
+          alt="Codeclan Logo"
+          width='400px'
+        />
+      </section>
       <Arrow direction="rightArrow" link='Intro' />
     </section>
   )

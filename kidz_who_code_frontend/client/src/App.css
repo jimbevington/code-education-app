@@ -11,8 +11,15 @@ h1 {
 }
 
 .page {
+  min-height: 750px;
+  min-width: 900px;
   margin-top: 150px;
   margin-bottom: 30px;
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
 }
 
 .float-left {
@@ -27,4 +34,9 @@ h1 {
     content: "";
     clear: both;
     display: table;
+}
+
+.column {
+  display: flex;
+  flex-flow: column;
 }

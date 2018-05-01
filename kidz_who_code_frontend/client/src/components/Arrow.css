@@ -1,6 +1,9 @@
 .upArrow {
   transform: rotate(90deg);
   float: left;
+  position:absolute;
+  top: 0px;
+  left: 40px;
 }
 
 .downArrow {
@@ -16,4 +19,6 @@
 
 .arrow-link {
   margin: none;
+  height: 200px;
+  width: 220px;
 }
