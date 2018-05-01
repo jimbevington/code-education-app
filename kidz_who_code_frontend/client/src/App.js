@@ -13,7 +13,6 @@ class App extends Component {
       userName: ''
     }
   }
-  // state = { facts: [] }
 
   componentDidMount(){
     fetch('/facts')
