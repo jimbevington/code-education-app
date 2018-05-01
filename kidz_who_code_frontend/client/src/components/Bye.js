@@ -4,32 +4,25 @@ import Alien from './Alien';
 import SpeechBubble from './SpeechBubble';
 import LinkImage from './LinkImage';
 import codeclan from './public/codeclan-logo.png';
+import './Bye.css';
 
 const Bye = () => {
 
   const wellDone = 'Well Done! You\'re now a Junior Developer!';
   const signUp = 'You\'re ready for your next challenge';
-  const codeClan = () => {
-    return <LinkImage
-            href="https://codeclan.com/"
-            img={codeclan}
-            alt="Codeclan Logo"
-          />
-  }
-  // const codeClan = () => {
-  //   return (
-  //     <a href="https://codeclan.com/">
-  //       <img src={codeclan} alt="CodeClan logo"/>
-  //     </a>
-  // }
 
-  const bubbleContents = [wellDone, signUp, codeClan()];
+  const bubbleContents = [wellDone, signUp];
 
   return (
-    <section id="bye">
+    <section id="bye page">
       <Arrow direction='upArrow' link='Quiz' />
-      <Alien />
       <SpeechBubble paras={bubbleContents}/>
+      <Alien />
+      <LinkImage
+        href="https://codeclan.com/"
+        img={codeclan}
+        alt="Codeclan Logo"
+      />
       <Arrow direction="rightArrow" link='Intro' />
     </section>
   )
