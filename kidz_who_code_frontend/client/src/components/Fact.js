@@ -16,6 +16,9 @@ const Fact = (props) => {
     <div id='facts-container' className='page'>
       <Arrow direction="upArrow" link="Intro"/>
       <h1>Fun Facts!</h1>
+      <br />
+      <p id="speechbubble">Let's start learning! Click on each button to find out more.</p>
+      <Alien />
        <CompInfo facts={props} />
       <br />
       <CodeInfo facts={props} />
@@ -25,10 +28,8 @@ const Fact = (props) => {
       <Order facts={props}  />
       <br />
       <Bug facts={props} />
-      <br />
       <Arrow direction="downArrow" link="Game"/>
-      <Alien />
-      <p id="speechbubble">Let's start learning! Click on each button to find out more.</p>
+
     </div>
   );
 

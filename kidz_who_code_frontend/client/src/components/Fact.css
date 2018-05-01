@@ -3,52 +3,62 @@
   border: solid 10px black;
   background-color: #87CEFA;
   padding: 50px;
-
 }
 
 
 h1 {
   font-family: Lobster;
   text-align: center;
-  font-size: 60px;
+  font-size: 80px;
+  position: relative;
+  bottom: 70px;
 
 }
 
 #fact1 {
   position: relative;
-  left: 150px;
+  bottom: 720px;
+  left: 4px;
 }
 
 #fact {
   position: relative;
-  left: 297px;
+  bottom: 720px;
+  left: 400px;
 }
 
 
 .alienpic {
 
- width: 500px;
+ width: 400px;
  height: 600px;
  padding: 0px;
-
+ position: relative;
+ bottom: 290px;
 
 }
 
 .upArrow {
-  width: 150px;
-  height: 200px;
+  width: 100px;
+  height: 150px;
+  position: relative;
+  bottom: 50px;
 }
 
 .downArrow {
-  width: 150px;
-  height: 200px;
+  width: 100px;
+  height: 150px;
+  position: relative;
+  top: -690px;
 }
 
 #speechbubble{
   padding: 10px;
   border: solid 2px black;
   background-color: white;
-  border-radius: 3px 20px 20px 20px;
+  position: relative;
+  bottom: 140px;
+  border-radius: 20px 20px 20px 3px;
   font-size: 35px;
   font-family: "Roboto", Arial, sans-serif;
 }
