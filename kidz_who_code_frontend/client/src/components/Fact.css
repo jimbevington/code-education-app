@@ -1,0 +1,39 @@
+#facts-container {
+
+  border: solid 10px black;
+  background-color: #87CEFA;
+  padding: 50px;
+}
+
+h1 {
+  font-family: Lobster;
+  text-align: center;
+  font-size: 60px;
+
+}
+
+.alienpic {
+
+ width: 400px;
+ height: 500px;
+
+
+}
+
+.upArrow {
+  width: 150px;
+  height: 200px;
+}
+
+.downArrow {
+  width: 150px;
+  height: 200px;
+}
+
+#speechbubble{
+  padding: 10px;
+  border: solid 2px black;
+  background-color: white;
+  border-radius: 3px 20px 20px 20px;
+  font-size: 20px
+}
