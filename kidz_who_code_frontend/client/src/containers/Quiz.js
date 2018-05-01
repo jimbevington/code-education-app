@@ -7,18 +7,18 @@ class Quiz extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      currentQuestion: null,
-      currentScore: null
+      currentQuestion: 0,
+      currentScore: 0
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentDidMount(){
-    this.setState({
-      currentQuestion: 0,
-      currentScore: 0
-    });
-  }
+  // componentDidMount(){
+  //   this.setState({
+  //     currentQuestion: 0,
+  //     currentScore: 0
+  //   });
+  // }
 
   handleSubmit(){
     // get the current question
@@ -40,15 +40,11 @@ class Quiz extends React.Component {
     return(
       <React.Fragment>
         <h1>Quiz</h1>
-        {console.log(this.props)}
         <Question
-          facts={this.props}
+          qAndAs={this.props.facts[1].q_and_a}
           currentQuestion={this.state.currentQuestion}
         />
         <SubmitAnswer handleClick={this.handleSubmit} />
-        {console.log('currentQuestion', this.state.currentQuestion)}
-        {console.log('currentScore', this.state.currentScore)}
-        // Add the three answer options
         <ScoreBoard currentScore={this.state.currentScore} />
       </React.Fragment>
     )
