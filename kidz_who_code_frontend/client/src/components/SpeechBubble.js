@@ -11,7 +11,10 @@ const SpeechBubble = (props) => {
   })
 
   return (
-    <article className='speech-bubble'>
+    <article
+      className='speech-bubble'
+      style={{width: props.width}}
+    >
       {paras}
     </article>
   )

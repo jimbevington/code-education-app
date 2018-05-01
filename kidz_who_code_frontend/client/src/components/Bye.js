@@ -16,7 +16,7 @@ const Bye = () => {
   return (
     <section id="bye page">
       <Arrow direction='upArrow' link='Quiz' />
-      <SpeechBubble paras={bubbleContents}/>
+      <SpeechBubble paras={bubbleContents} width='300px'/>
       <LinkImage
         href="https://codeclan.com/"
         img={codeclan}
