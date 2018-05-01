@@ -3,7 +3,7 @@ import React from 'react';
 const ScoreBoard = (props) => {
   return(
     <React.Fragment>
-      {props.currentScore}
+      <h2>{props.currentScore} out of 6</h2>
     </React.Fragment>
   )
 }
