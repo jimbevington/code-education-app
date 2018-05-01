@@ -7,13 +7,13 @@ import Arrow from './Arrow';
 import EnterYourName from './EnterYourName';
 import './Intro.css';
 
-const Intro = () => {
+const Intro = (props) => {
 
   const nameForm = () => {
-    return <EnterYourName />
+    return <EnterYourName handleSubmitClick={props.handleNameSaveClick} />
   }
 
-  const speechBubbleParas = ['Hi, I\'m Divvy!', 'What\'s your name?', nameForm];
+  const speechBubbleParas = ['Hi, I\'m Divvy!', 'What\'s your name?', nameForm()];
 
   return (
     <section id='intro-page'>

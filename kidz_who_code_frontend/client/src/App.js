@@ -20,7 +20,7 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <Intro />
+        <Intro handleNameSaveClick={this.saveName}/>
         {/* Welcome */}
         <Fact facts={this.state.facts}/>
         <Game squaredSize={6}/>
