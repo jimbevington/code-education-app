@@ -41,7 +41,10 @@ class Quiz extends React.Component {
       <React.Fragment>
         <h1>Quiz</h1>
         {console.log(this.props)}
-        <Question facts={this.props}/>
+        <Question
+          facts={this.props}
+          currentQuestion={this.state.currentQuestion}
+        />
         <SubmitAnswer handleClick={this.handleSubmit} />
         {console.log('currentQuestion', this.state.currentQuestion)}
         {console.log('currentScore', this.state.currentScore)}
