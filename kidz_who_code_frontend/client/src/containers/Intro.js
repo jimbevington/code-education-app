@@ -6,10 +6,10 @@ class Intro extends React.Component {
 
   render(){
     return (
-      <div>
-      <Heading text='Welcome to Kidz Who Code'/>
-      <Welcome />
-      </div>
+      <section id='intro-page'>
+        <Heading text='Welcome to Kidz Who Code'/>
+        <Welcome />
+      </section>
     )
   }
 
