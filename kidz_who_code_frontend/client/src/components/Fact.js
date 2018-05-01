@@ -13,7 +13,7 @@ import './Fact.css'
 const Fact = (props) => {
   if(props.length === 0) return null;
   return (
-    <div id='facts-container'>
+    <div id='facts-container' className='page'>
       <Arrow direction="upArrow" link="Intro"/>
       <h1>Fun Facts!</h1>
       <CompInfo facts={props} />

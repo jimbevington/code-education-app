@@ -135,7 +135,7 @@ class Game extends React.Component {
 
   render(){
     return (
-      <React.Fragment>
+      <section id="game page">
         <Arrow direction="upArrow" link="Facts" />
         <Heading text="Take Divvy Home!" />
         <InfoBox text="Here are some instructions." />
@@ -151,7 +151,7 @@ class Game extends React.Component {
         </div>
         <Go handleClick={this.handleMove}/>
         <Arrow direction="downArrow" link="Quiz" />
-      </React.Fragment>
+      </section>
     )
   }
 }

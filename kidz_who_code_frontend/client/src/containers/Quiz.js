@@ -3,6 +3,7 @@ import Question from '../components/Question';
 import ScoreBoard from '../components/ScoreBoard';
 import SubmitAnswer from '../components/SubmitAnswer';
 import Arrow from '../components/Arrow';
+import './Quiz.css';
 
 class Quiz extends React.Component {
   constructor(props){
@@ -34,7 +35,7 @@ class Quiz extends React.Component {
 
   render(){
     return(
-      <React.Fragment>
+      <section id="quiz page">
         <Arrow direction="upArrow" link="Game" />
         <h1>Quiz</h1>
         <Question
@@ -44,7 +45,7 @@ class Quiz extends React.Component {
         <SubmitAnswer handleClick={this.handleSubmit} />
 
         <Arrow direction="downArrow" link="Bye" />
-      </React.Fragment>
+      </section>
     )
   }
 }

@@ -33,7 +33,6 @@ class App extends Component {
     return (
       <div className="App">
         <Intro handleNameSaveClick={this.saveName}/>
-        {/* Welcome */}
         <Fact facts={this.state.facts}/>
         <Game squaredSize={6}/>
         <Quiz facts={this.state.facts} />
