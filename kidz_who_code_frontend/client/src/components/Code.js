@@ -1,31 +1,25 @@
 import React from "react";
 import Popup from "reactjs-popup";
 
-
-
-
-const Code = () => (
+const Code = (props) => (
 
   <Popup
-    trigger={<button className="button"> Click Me! </button>}
+    trigger={<button className="button"> {props.facts.facts[0].info[2].question} </button>}
     modal
-    // contentStyle={contentStyle}
-  >
-    {close => (
-      <div className="modal">
-        <a className="close" onClick={close}>
-          &times;
-        </a>
-        <div className="header"> What does code LOOK like? </div>
-        <div className="content">
-          {" "}
-          <br />
-          Code is made up of words, numbers and symbols. You need to put them in
-          the right order to tell your computer what you want it to do. Just
-          like a set of instructions.
-          <br />
+    >
+      {close => (
+        <div className="modal">
+          <a className="close" onClick={close}>
+            &times;
+          </a>
+          <div className="header"> {props.facts.facts[0].info[2].question} </div>
+          <div className="content">
+            {" "}
+            <br />
+            {props.facts.facts[0].info[2].answer}
+            <br />
 
-        </div>
+          </div>
 
           <button
             className="button"
@@ -33,15 +27,15 @@ const Code = () => (
               console.log("modal closed ");
               close();
             }}
-          >
-            Close
-          </button>
-        </div>
+            >
+              Close
+            </button>
+          </div>
 
-    )}
-  </Popup>
-  );
+        )}
+      </Popup>
+    );
 
 
 
-  export default Code;
+    export default Code;
