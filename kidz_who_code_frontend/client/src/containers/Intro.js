@@ -7,7 +7,7 @@ class Intro extends React.Component {
   render(){
     return (
       <div>
-      <Heading text='Welcome to Kidz Who Code'/>
+      <Heading text='luke is awesome'/>
       <Welcome />
       </div>
     )

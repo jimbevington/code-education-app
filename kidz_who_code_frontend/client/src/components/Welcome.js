@@ -18,13 +18,11 @@ const Welcome = (props) => {
     </form>
       </section>
       <InfoBox text='This is where all the words in the info box are going to go' />
-    {/* <section className="infobox">
-      <h2 id="infobox-heading">Info Box Heading</h2>
-      <p>This is where all the words in the info box are going to go</p>
-    </section> */}
-    <img src={DownArrow} width="200" height="200" alt="this should be a down arrow" />
-    </div>
-  )
+
+    <button id="to-facts"><img src={DownArrow} width="200" height="200" alt="this should be a down arrow" /></button>
+  </div>
+)
+
 }
 
 export default Welcome;
