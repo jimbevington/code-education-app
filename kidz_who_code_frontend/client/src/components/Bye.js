@@ -17,12 +17,13 @@ const Bye = () => {
     <section id="bye page">
       <Arrow direction='upArrow' link='Quiz' />
       <SpeechBubble paras={bubbleContents}/>
-      <Alien />
       <LinkImage
         href="https://codeclan.com/"
         img={codeclan}
         alt="Codeclan Logo"
+        width='400px'
       />
+      <Alien floatStyle="float-left"/>
       <Arrow direction="rightArrow" link='Intro' />
     </section>
   )

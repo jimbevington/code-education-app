@@ -9,3 +9,22 @@ h1 {
   font-family: Lobster;
   text-align: center;
 }
+
+.page {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-none {
+  float: none;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

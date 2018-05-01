@@ -8,6 +8,11 @@
   float: right;
 }
 
+.rightArrow {
+  transform: rotate(180deg);
+  float: right;
+}
+
 
 .arrow-link {
   margin: none;

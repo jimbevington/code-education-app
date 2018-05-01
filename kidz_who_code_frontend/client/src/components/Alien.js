@@ -2,10 +2,13 @@ import React from 'react';
 import alien from './public/divvy.svg';
 
 
-const Alien = () => {
+const Alien = (props) => {
+
+  const alienClasses = 'alienpic ' + props.floatStyle + ' clearfix';
+
   return (
     <img
-      className="alienpic"
+      className={alienClasses}
       src={alien} alt="Scary Alien"
       width="200" height="200"/>
   )
