@@ -3,7 +3,7 @@ import React from 'react';
 const Question = (props) => {
 
   const q = props.facts.facts[1].q_and_a.filter(element => element.id === props.currentQuestion);
-  debugger;
+  // debugger;
 
   return(
     <React.Fragment>
