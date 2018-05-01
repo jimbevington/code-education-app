@@ -12,12 +12,17 @@ class App extends Component {
       facts: [],
       userName: ''
     }
+    this.saveName = this.saveName.bind(this);
   }
 
   componentDidMount(){
     fetch('/facts')
     .then(res => res.json())
     .then(facts => this.setState({ facts }));
+  }
+
+  saveName(name){
+    this.setState({userName: name});
   }
 
   render() {

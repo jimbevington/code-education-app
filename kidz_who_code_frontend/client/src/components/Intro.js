@@ -4,7 +4,7 @@ import Alien from './Alien';
 import InfoBox from './InfoBox'
 import SpeechBubble from './SpeechBubble';
 import Arrow from './Arrow';
-import EnterYourName from './EnterYourName';
+import EnterYourName from '../containers/EnterYourName';
 import './Intro.css';
 
 const Intro = (props) => {
