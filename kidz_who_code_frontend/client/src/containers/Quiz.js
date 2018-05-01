@@ -40,7 +40,8 @@ class Quiz extends React.Component {
           currentQuestion={this.state.currentQuestion}
         />
         <SubmitAnswer handleClick={this.handleSubmit} />
-        <ScoreBoard currentScore={this.state.currentScore} />
+        // display ScoreBoard only when all questions have been answered
+        {/* <ScoreBoard currentScore={this.state.currentScore} /> */}
       </React.Fragment>
     )
   }

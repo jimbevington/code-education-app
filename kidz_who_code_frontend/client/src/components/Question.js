@@ -11,21 +11,10 @@ const Question = (props) => {
 
   return(
     <React.Fragment>
-      <form>
-        <h2>Q{questionData.id}. {question}</h2>
-        <label>
-          <input type='radio' name='answers' value={correctAnswer} checked={true} />
-          {correctAnswer}
-        </label>
-        <label>
-          <input type='radio' name='answers' value={incorrectAnswer1} />
-          {incorrectAnswer1}
-        </label>
-        <label>
-          <input type='radio' name='answers' value={incorrectAnswer2} />
-          {incorrectAnswer2}
-        </label>
-      </form>
+      <h2>Q{questionData.id}. {question}</h2>
+      <button className="button">{correctAnswer}</button>
+      <button className="button">{incorrectAnswer1}</button>
+      <button className="button">{incorrectAnswer2}</button>
     </React.Fragment>
   )
 }
