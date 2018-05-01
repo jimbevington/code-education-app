@@ -23,7 +23,7 @@ const Intro = (props) => {
       <InfoBox
         text='Are you ready to become a developer. Lets learn what code is, program a rocket ship and test your knowledge!'
       />
-      <Arrow direction="downArrow" link="Facts"/>
+      <Arrow direction="down" link="Facts"/>
     </section>
   )
 }

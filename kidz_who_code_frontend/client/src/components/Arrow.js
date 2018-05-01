@@ -1,5 +1,5 @@
 import React from 'react'
-import arrow from "./public/downarrow.png";
+import arrow from "./public/big-arrow.svg";
 import './Arrow.css';
 
 const Arrow = (props) => {
