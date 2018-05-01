@@ -6,7 +6,14 @@ import Quiz from './containers/Quiz';
 import './App.css';
 
 class App extends Component {
-  state = { facts: [] }
+  constructor(props){
+    super(props);
+    this.state = {
+      facts: [],
+      userName: ''
+    }
+  }
+  // state = { facts: [] }
 
   componentDidMount(){
     fetch('/facts')

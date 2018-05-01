@@ -4,7 +4,10 @@ import './SpeechBubble.css';
 const SpeechBubble = (props) => {
 
   const paras = props.paras.map((text, index) => {
-    return <p key={index}>{text}</p>
+    if (typeof text === 'string'){
+      return <p key={index}>{text}</p>
+    }
+    return <article key={index}>{text}</article>
   })
 
   return (
