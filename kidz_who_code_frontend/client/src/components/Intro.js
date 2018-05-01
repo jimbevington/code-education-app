@@ -4,11 +4,16 @@ import Alien from './Alien';
 import InfoBox from './InfoBox'
 import SpeechBubble from './SpeechBubble';
 import Arrow from './Arrow';
+import EnterYourName from './EnterYourName';
 import './Intro.css';
 
 const Intro = () => {
 
-  const speechBubbleParas = ['Hi, I\'m Divvy!', 'What\'s your name?'];
+  const nameForm = () => {
+    return <EnterYourName />
+  }
+
+  const speechBubbleParas = ['Hi, I\'m Divvy!', 'What\'s your name?', nameForm];
 
   return (
     <section id='intro-page'>
