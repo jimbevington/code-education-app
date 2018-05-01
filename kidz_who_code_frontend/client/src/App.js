@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Intro from './containers/Intro';
+import Intro from './components/Intro';
 import Game from './containers/Game';
 import Fact from './components/Fact';
 import Quiz from './containers/Quiz';
