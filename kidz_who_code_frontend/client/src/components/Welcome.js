@@ -17,7 +17,7 @@ const Welcome = (props) => {
       <input type="submit" name="submitbutton" value="Let's get Divvy home!" />
     </form>
       </section>
-      <InfoBox text='This is where all the words in the info box are going to go' />
+      {/* <InfoBox text='This is where all the words in the info box are going to go' /> */}
     <img src={DownArrow} width="200" height="200" alt="this should be a down arrow" />
     </div>
   )

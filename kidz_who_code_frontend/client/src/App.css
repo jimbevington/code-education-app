@@ -5,12 +5,6 @@ body {
   padding: 100px;
 }
 
-#welcome {
-  border: 10px black solid;
-  padding: 40px;
-  background-color: #503047;
-}
-
 h1 {
   font-family: Lobster;
   text-align: center;
