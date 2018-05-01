@@ -1,25 +1,25 @@
 import React from 'react';
 import Heading from './Heading';
-import Welcome from './Welcome';
-import InfoBox from './InfoBox';
+import Alien from './Alien';
+import InfoBox from './InfoBox'
+import SpeechBubble from './SpeechBubble';
 import './Intro.css';
 
 const Intro = () => {
   return (
     <section id='intro-page'>
       <Heading text='Welcome to Kidz Who Code'/>
+      <SpeechBubble text="This is the text to go in the speech bubble. What's your name?"/>
+      <Alien />
       <InfoBox
-        text='This is where all the words in the info box are going to go'
+        text='Are you ready to become a developer. Lets learn what code is, program a rocket ship and test your knowledge!'
       />
+      <Arrow direction="down" link="Facts"/>
     </section>
   )
 }
 
 
-// Heading
-// Alien
-// Info
-// Speech Bubble
 // Enter Your Name form
 // Down Arrow
 

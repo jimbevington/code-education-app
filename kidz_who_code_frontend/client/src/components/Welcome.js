@@ -1,6 +1,6 @@
 import React from 'react';
 import DownArrow from "./public/downarrow.png";
-import Alien from "./public/alien.jpg";
+import alien from "./public/alien.jpg";
 import InfoBox from './InfoBox';
 import './Welcome.css';
 
@@ -9,7 +9,7 @@ const Welcome = (props) => {
     <div id="welcome">
       <h1>This is the welcome text</h1>
       <section className="alien">
-      <img id="alienpic" src={Alien} alt="this is an alien" width="200" height="200"/>
+      <img id="alienpic" src={alien} alt="this is an alien" width="200" height="200"/>
 
       <form method="get">
       <p id="speechbubble">This is the text to go in the speech bubble. What's your name?</p>
