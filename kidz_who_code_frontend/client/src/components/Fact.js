@@ -16,14 +16,19 @@ const Fact = (props) => {
     <div id='facts-container' className='page'>
       <Arrow direction="upArrow" link="Intro"/>
       <h1>Fun Facts!</h1>
-      <CompInfo facts={props} />
+       <CompInfo facts={props} />
+      <br />
       <CodeInfo facts={props} />
+      <br />
       <Code facts={props} />
+      <br />
       <Order facts={props}  />
+      <br />
       <Bug facts={props} />
+      <br />
       <Arrow direction="downArrow" link="Game"/>
       <Alien />
-      <p id="speechbubble">Let's start learning! Click on each button find out more</p>
+      <p id="speechbubble">Let's start learning! Click on each button to find out more.</p>
     </div>
   );
 

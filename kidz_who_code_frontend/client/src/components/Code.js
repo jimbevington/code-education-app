@@ -4,7 +4,7 @@ import Popup from "reactjs-popup";
 const Code = (props) => (
 
   <Popup
-    trigger={<button className="button"> {props.facts.facts[0].info[2].question} </button>}
+    trigger={<button className="button" id='fact'> {props.facts.facts[0].info[2].question} </button>}
     modal
     >
       {close => (
