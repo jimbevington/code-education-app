@@ -5,6 +5,12 @@ body {
   padding: 100px;
 }
 
+header {
+  position:absolute;
+  top: 0px;
+  left: 40px;
+}
+
 h1 {
   font-family: Lobster;
   text-align: center;
@@ -20,6 +26,7 @@ h1 {
   align-items: flex-end;
   justify-content: space-between;
   position: relative;
+  border: solid 3px black;
 }
 
 .float-left {

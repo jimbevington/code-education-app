@@ -4,7 +4,6 @@ import Alien from './Alien';
 import SpeechBubble from './SpeechBubble';
 import LinkImage from './LinkImage';
 import codeclan from './public/codeclan-logo.png';
-import './Bye.css';
 
 const Bye = () => {
 
@@ -15,9 +14,11 @@ const Bye = () => {
 
   return (
     <section id="bye" className="page">
-      <Arrow direction='upArrow' link='Quiz' />
+      <header>
+        <Arrow direction='upArrow' link='Quiz' />
+      </header>
       <Alien floatStyle="float-none"/>
-      <section className='column' style={{'align-self': 'center'}}>
+      <section className='column' style={{'alignSelf': 'center'}}>
         <SpeechBubble paras={bubbleContents} width='300px'/>
         <LinkImage
           href="https://codeclan.com/"

@@ -1,9 +1,9 @@
 .upArrow {
   transform: rotate(90deg);
   float: left;
-  position:absolute;
+  /* position:absolute;
   top: 0px;
-  left: 40px;
+  left: 40px; */
 }
 
 .downArrow {
