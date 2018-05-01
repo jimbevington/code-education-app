@@ -1,6 +1,8 @@
 .speech-bubble{
-  padding: 100px;
+  padding: 60px;
   border: solid 10px white;
   background-color: white;
-  border-radius: 5px 150px 150px 150px;
+  border-radius: 150px 150px 150px 3px;
+
+
 }
