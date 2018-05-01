@@ -30,6 +30,14 @@ body {
   transition: all 0.3s;
 }
 
+.buttonCorrect {
+  background-color: #46ac75;
+}
+
+.buttonIncorrect {
+  background-color: #ca4354;
+}
+
 .button:hover,
 .button.hover {
   border-color: #00FFFF;
