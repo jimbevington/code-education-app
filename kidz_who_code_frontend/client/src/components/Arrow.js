@@ -11,7 +11,7 @@ const Arrow = (props) => {
       <img
         className={classList}
         src={arrow} alt="Down Arrow Link to Next Page"
-        width="200" height="200"
+        width="250" height="250"
       />
     </a>
   )

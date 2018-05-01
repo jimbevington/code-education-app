@@ -1,3 +1,13 @@
 .upArrow {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
+}
+
+.downArrow {
+  transform: rotate(-90deg);
+  float: right;
+}
+
+
+.arrow-link {
+  margin: none;
 }
