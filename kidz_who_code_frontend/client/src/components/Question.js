@@ -4,7 +4,6 @@ const Question = (props) => {
 
   const q = props.facts.facts[1].q_and_a.filter(element => element.id === props.currentQuestion);
 
-
   return(
     <React.Fragment>
       <h1>currentQuestion is {props.currentQuestion}</h1>

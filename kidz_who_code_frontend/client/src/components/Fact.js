@@ -5,6 +5,7 @@ import Code from "./Code.js";
 import Order from "./Order.js";
 import Bug from "./Bug.js";
 import Arrow from './Arrow';
+import Alien from './Alien.js'
 
 
 const Fact = (props) => {
@@ -19,6 +20,7 @@ const Fact = (props) => {
       <Order facts={props}  />
       <Bug facts={props} />
       <Arrow direction="downArrow" link="Game"/>
+      <Alien />
     </div>
   );
 
