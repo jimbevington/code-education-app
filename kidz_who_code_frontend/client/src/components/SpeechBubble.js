@@ -2,7 +2,16 @@ import React from 'react';
 import './SpeechBubble.css';
 
 const SpeechBubble = (props) => {
-  return <p className='speech-bubble'>{props.text}</p>
+
+  const paras = props.paras.map((text, index) => {
+    return <p key={index}>{text}</p>
+  })
+
+  return (
+    <article className='speech-bubble'>
+      {paras}
+    </article>
+  )
 }
 
 export default SpeechBubble;
