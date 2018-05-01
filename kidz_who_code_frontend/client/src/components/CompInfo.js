@@ -1,9 +1,10 @@
 import React from "react";
 import Popup from "reactjs-popup";
 
+
 const CompInfo = (props) => (
   <Popup
-    trigger={<button className="button"> Click Me! </button>}
+    trigger={<button className="button"> {props.facts.facts[0].info[0].question} </button>}
     modal
     >
 
@@ -12,35 +13,36 @@ const CompInfo = (props) => (
           <a className="close" onClick={close}>
             &times;
           </a>
-          <div className="header"> What is a COMPUTER? </div>
+
+          <div className="header"> {props.facts.facts[0].info[0].question} </div>
+
           <div className="content">
-
-            <div>
-              {props.facts.map(fact =>
-                <div key={fact.id}>
-                  <p>{props.facts[0].answer}</p>
-                </div>
-              )}
+            {" "}
+            <br />
+            {props.facts.facts[0].info[0].answer}
+            <br />
+          </div>
 
 
-              <button
-                className="button"
-                onClick={() => {
-                  console.log("modal closed ");
-                  close();
-                }}
-                >
-                  Close
-                </button>
-              </div>
-            </div>
-            // </div>
-          )}
-        </Popup>
-      );
+          <button
+            className="button"
+            onClick={() => {
+              console.log("modal closed ");
+              close();
+            }}
+            >
+              Close
+            </button>
+          </div>
 
+
+
+        )}
+      </Popup>
+    );
 
 
 
 
-      export default CompInfo;
+
+    export default CompInfo;
