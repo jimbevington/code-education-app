@@ -2,6 +2,7 @@ import React from 'react';
 import Question from '../components/Question';
 import ScoreBoard from '../components/ScoreBoard';
 import SubmitAnswer from '../components/SubmitAnswer';
+import Arrow from '../components/Arrow';
 
 class Quiz extends React.Component {
   constructor(props){
@@ -39,6 +40,7 @@ class Quiz extends React.Component {
   render(){
     return(
       <React.Fragment>
+        <Arrow direction="upArrow" link="Game" />
         <h1>Quiz</h1>
         {console.log(this.props)}
         <Question
@@ -50,6 +52,7 @@ class Quiz extends React.Component {
         {console.log('currentScore', this.state.currentScore)}
         // Add the three answer options
         <ScoreBoard currentScore={this.state.currentScore} />
+        <Arrow direction="downArrow" link="Bye" />
       </React.Fragment>
     )
   }
