@@ -4,6 +4,7 @@ import MovesContainer from '../components/MovesContainer'
 import Go from '../components/Go'
 import Heading from '../components/Heading';
 import InfoBox from '../components/InfoBox';
+import Arrow from '../components/Arrow';
 import './Game.css';
 
 class Game extends React.Component {
@@ -135,6 +136,7 @@ class Game extends React.Component {
   render(){
     return (
       <React.Fragment>
+        <Arrow direction="upArrow" link="Facts" />
         <Heading text="Take Divvy Home!" />
         <InfoBox text="Here are some instructions." />
         <div className='game-container'>
@@ -148,6 +150,7 @@ class Game extends React.Component {
           />
         </div>
         <Go handleClick={this.handleMove}/>
+        <Arrow direction="downArrow" link="Quiz" />
       </React.Fragment>
     )
   }

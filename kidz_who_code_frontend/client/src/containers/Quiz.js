@@ -2,6 +2,7 @@ import React from 'react';
 import Question from '../components/Question';
 import ScoreBoard from '../components/ScoreBoard';
 import SubmitAnswer from '../components/SubmitAnswer';
+import Arrow from '../components/Arrow';
 
 class Quiz extends React.Component {
   constructor(props){
@@ -34,14 +35,15 @@ class Quiz extends React.Component {
   render(){
     return(
       <React.Fragment>
+        <Arrow direction="upArrow" link="Game" />
         <h1>Quiz</h1>
         <Question
           qAndAs={this.props.facts[1].q_and_a}
           currentQuestion={this.state.currentQuestion}
         />
         <SubmitAnswer handleClick={this.handleSubmit} />
-        // display ScoreBoard only when all questions have been answered
-        {/* <ScoreBoard currentScore={this.state.currentScore} /> */}
+
+        <Arrow direction="downArrow" link="Bye" />
       </React.Fragment>
     )
   }

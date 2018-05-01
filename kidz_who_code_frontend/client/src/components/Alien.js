@@ -1,11 +1,12 @@
 import React from 'react';
-import alien from "./public/alien.jpg";
+import alien from './public/divvy.svg';
+
 
 const Alien = () => {
   return (
     <img
       className="alienpic"
-      src={alien} alt="Divvy the Alien"
+      src={alien} alt="Scary Alien"
       width="200" height="200"/>
   )
 }

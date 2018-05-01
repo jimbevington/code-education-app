@@ -3,6 +3,7 @@ import Intro from './components/Intro';
 import Game from './containers/Game';
 import Fact from './components/Fact';
 import Quiz from './containers/Quiz';
+import Bye from './components/Bye';
 import './App.css';
 
 class App extends Component {
@@ -36,7 +37,7 @@ class App extends Component {
         <Fact facts={this.state.facts}/>
         <Game squaredSize={6}/>
         <Quiz facts={this.state.facts} />
-        {/* BYE */}
+        <Bye />
       </div>
     );
   }

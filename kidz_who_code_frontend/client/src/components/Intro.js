@@ -1,6 +1,6 @@
 import React from 'react';
 import Heading from './Heading';
-import Alien from './Alien';
+import divvy from './public/divvy.svg';
 import InfoBox from './InfoBox'
 import SpeechBubble from './SpeechBubble';
 import Arrow from './Arrow';
@@ -19,7 +19,7 @@ const Intro = (props) => {
     <section id='intro-page'>
       <Heading text='Welcome to Kidz Who Code'/>
       <SpeechBubble paras={speechBubbleParas}/>
-      <Alien />
+      <img className="divvy" src={divvy} alt="divvy"/>
       <InfoBox
         text='Are you ready to become a developer. Lets learn what code is, program a rocket ship and test your knowledge!'
       />
