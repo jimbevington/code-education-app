@@ -3,18 +3,22 @@ import Heading from './Heading';
 import Alien from './Alien';
 import InfoBox from './InfoBox'
 import SpeechBubble from './SpeechBubble';
+import Arrow from './Arrow';
 import './Intro.css';
 
 const Intro = () => {
+
+  const speechBubbleParas = ['Hi, I\'m Divvy!', 'What\'s your name?'];
+
   return (
     <section id='intro-page'>
       <Heading text='Welcome to Kidz Who Code'/>
-      <SpeechBubble text="This is the text to go in the speech bubble. What's your name?"/>
+      <SpeechBubble paras={speechBubbleParas}/>
       <Alien />
       <InfoBox
         text='Are you ready to become a developer. Lets learn what code is, program a rocket ship and test your knowledge!'
       />
-      <Arrow direction="down" link="Facts"/>
+      <Arrow direction="downArrow" link="Facts"/>
     </section>
   )
 }
