@@ -28,8 +28,4 @@ const Intro = (props) => {
   )
 }
 
-
-// Enter Your Name form
-// Down Arrow
-
 export default Intro;
