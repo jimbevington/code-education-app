@@ -4,10 +4,10 @@ body {
   font-family: sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+.divvy {
+  height: 600px;
+  width: 600px;
+
 }
 
 .button {
@@ -23,8 +23,8 @@ body {
   font-size: 1em;
   outline: none;
   position: relative;
-  font-size: 14px;
-  border: 3px solid #cfcece;
+  font-size: 20px;
+  border: 6px solid #8080ff;
   background-color: #ffffff;
   border-radius: 15px 15px 15px 15px;
   -webkit-transition: all 0.3s;
@@ -33,31 +33,37 @@ body {
 
 .button:hover,
 .button.hover {
-  border-color: #2980b9;
+  border-color: #00FFFF;
 }
 
 .modal {
-  font-size: 12px;
+  font-size: 25px;
+  background-color: #009999;
+
 }
 .modal > .header {
   width: 100%;
-  border-bottom: 1px solid gray;
-  font-size: 18px;
+  border-bottom: 1px solid white;
+  font-size: 35px;
   text-align: center;
-  padding: 5px;
+  padding: 8px;
 }
 .modal > .content {
-  width: 100%;
-  padding: 10px 5px;
+  width: 90%;
+  padding: 10px 2px;
+  text-align: center;
+
 }
+
 .modal > .actions {
   margin: auto;
 }
+
 .modal > .actions {
   width: 100%;
   padding: 10px 5px;
-  text-align: center;
 }
+
 .modal > .close {
   cursor: pointer;
   position: absolute;

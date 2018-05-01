@@ -4,6 +4,7 @@ import CodeInfo from "./CodeInfo.js";
 import Code from "./Code.js";
 import Order from "./Order.js";
 import Bug from "./Bug.js";
+import divvy from './public/divvy.svg';
 
 
 const Fact = (props) => {
@@ -16,6 +17,7 @@ const Fact = (props) => {
       <Code facts={props} />
       <Order facts={props}  />
       <Bug facts={props} />
+      <img className="divvy" src={divvy} alt="divvy"/>
     </div>
   );
 
