@@ -1,9 +1,10 @@
 import React from 'react';
 import Grid from '../components/Grid';
 import MovesContainer from '../components/MovesContainer'
-import MoveBoard from '../components/MoveBoard';
-import Go from '../components/Go';
+import Go from '../components/Go'
 import Heading from '../components/Heading';
+import InfoBox from '../components/InfoBox';
+import './Game.css';
 
 class Game extends React.Component {
   constructor(props){
@@ -61,7 +62,7 @@ class Game extends React.Component {
     }
 
     const updatedMoves = this.state.moveList;
-    updatedMoves.push(event.target.value);
+    updatedMoves.push(event.target.getAttribute('value'));
     const updatedDirMoves = this.state.moveDirList;
     updatedDirMoves.push(event.target.getAttribute('direction'));
     this.setState({moveList: updatedMoves, moveDirList: updatedDirMoves});
@@ -135,12 +136,17 @@ class Game extends React.Component {
     return (
       <React.Fragment>
         <Heading text="Take Divvy Home!" />
-        <MovesContainer
-          squaredSize={this.props.squaredSize}
-          handleMoveClick={this.addMove}
-        />
-        <Grid squaredSize={this.props.squaredSize} cellStates={this.state.cellStates}/>
-        <MoveBoard moves={this.state.moveDirList} />
+        <InfoBox text="Here are some instructions." />
+        <div className='game-container'>
+          <Grid
+            squaredSize={this.props.squaredSize} cellStates={this.state.cellStates}
+          />
+          <MovesContainer
+            squaredSize={this.props.squaredSize}
+            handleMoveListClick={this.addMove}
+            moveList={this.state.moveDirList}
+          />
+        </div>
         <Go handleClick={this.handleMove}/>
       </React.Fragment>
     )

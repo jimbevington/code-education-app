@@ -1,77 +1,14 @@
-GAME
-  GRID
-    Cell
-    Cell
-    Cell
-    Cell
-    Cell
-    Cell
-    Cell
-    Cell
-    Cell
-    Cell
+fix Goal generation method
 
-    Player
-    Goal
+show Player in each cell as moves are made
 
-    return img
+Player swivels based on what direction it last moved
 
-  Moves
-    Direction value= img=UP
-    Direction value= img=DOWN
-    Direction value= img=LEFT
-    Direction value= img=RIGHT
-  MoveBoard
-  Go!
+generate Obstacles
 
-each Cell has an Index
+give Popup: You win
 
-
-Grid
-  has cellStates prop
-  has squaredSize prop
-
-  generates Cells based on squaredSize
-  uses cellStates
-
-Cell
-  has a value
-  returns a Component Player or Goal based on value
-
-Game :-
-  isWon - boolean (initialised at false)
-  cellStates = []
-  goalPosition = initalised null, generated on mount
-  playerPosition = initalised null, generated on mount
-
-  when Mounted,
-    generate goal- and playerPositions, with controls to keep them apart
-    updateCellState()
-
-  updateCellState() {
-    set index of goalPosition to 'goal'
-    set index of playerPosition to 'player'
-    setState({cellStates: states})
-  }
-
-  move Player() {
-    clearPlayerCell()
-    playerPosition += move
-    updateCellState()
-  }
-
-  checkWon(){
-    if (playerPosition == goalPosition){
-        setState isWon to true
-        goalPosition == null  // may not be necessary
-        declareWon()
-    }
-  }
-
-  clearPlayerCell(){
-    newStates = cellStates[playerPosition] == null;
-    setStates({cellStates: newStates});
-  }
+Give instructions
 
 
 TESTS -

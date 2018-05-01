@@ -1,7 +1,8 @@
 import React from 'react';
+import moon from './public/moon.svg';
 
 const Goal = () => {
-  return <div id='goal'>G</div>
+  return <img className='game-actor' src={moon} alt="Divvy's Home"/>
 }
 
 export default Goal;

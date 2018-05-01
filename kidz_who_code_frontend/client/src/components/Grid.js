@@ -25,9 +25,9 @@ const Grid = (props) => {
   }
 
   return  (
-    <React.Fragment>
+    <section className="grid">
       {grid}
-    </React.Fragment>
+    </section>
   )
 }
 

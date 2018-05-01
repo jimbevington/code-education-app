@@ -1,31 +1,17 @@
 import React from 'react';
-import Move from './Move';
+import MovesList from './MovesList';
+import MoveBoard from './MoveBoard';
+import './MovesContainer.css';
 
 const MovesContainer = (props) => {
-
   return (
-    <div className="moves-container">
-      <Move
-        direction="up"
-        moveValue={props.squaredSize * -1}
-        handleClick={props.handleMoveClick}
+    <section className="moves-container">
+      <MovesList
+        squaredSize={props.squaredSize}
+        handleMoveClick={props.handleMoveListClick}
       />
-      <Move
-        direction="down"
-        moveValue={props.squaredSize}
-        handleClick={props.handleMoveClick}
-      />
-      <Move
-        direction="left"
-        moveValue={-1}
-        handleClick={props.handleMoveClick}
-      />
-      <Move
-        direction="right"
-        moveValue={1}
-        handleClick={props.handleMoveClick}
-      />
-    </div>
+      <MoveBoard moves={props.moveList} />
+    </section>
   )
 }
 
