@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
-import Intro from './containers/Intro';
+import Intro from './components/Intro';
 import Game from './containers/Game';
 import Fact from './components/Fact';
 import Quiz from './containers/Quiz';
 import './App.css';
 
 class App extends Component {
-  state = { facts: [] }
+  constructor(props){
+    super(props);
+    this.state = {
+      facts: [],
+      userName: ''
+    }
+    this.saveName = this.saveName.bind(this);
+  }
 
   componentDidMount(){
     fetch('/facts')
     .then(res => res.json())
     .then(facts => this.setState({ facts }));
+  }
+
+  saveName(name){
+    this.setState({userName: name});
   }
 
   render() {
@@ -20,7 +31,7 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <Intro />
+        <Intro handleNameSaveClick={this.saveName}/>
         {/* Welcome */}
         <Fact facts={this.state.facts}/>
         <Game squaredSize={6}/>
