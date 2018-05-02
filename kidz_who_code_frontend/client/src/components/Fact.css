@@ -15,10 +15,29 @@ h1 {
 
 }
 
+
+
 #fact1 {
   position: relative;
   bottom: 720px;
   left: 4px;
+}
+
+#fact {
+  position: relative;
+  bottom: 720px;
+  left: 400px;
+}
+
+
+#fact-alien {
+
+ width: 400px;
+ height: 600px;
+ padding: 0px;
+ position: relative;
+ bottom: 290px;
+
 }
 
 .upArrow {
