@@ -22,7 +22,7 @@ const Fact = (props) => {
 
   if(props.length === 0) return null;
   return (
-    <section className='page' >
+    <section id="fact-page" className='page' >
 
       <header>
         <Arrow direction="upArrow" link="Intro"/>
