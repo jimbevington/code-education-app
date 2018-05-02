@@ -7,6 +7,7 @@ import Question from '../components/Question';
 import ScoreBoard from '../components/ScoreBoard';
 import SubmitAnswer from '../components/SubmitAnswer';
 import Result from '../components/Result';
+import './Quiz.css';
 
 class Quiz extends React.Component {
   constructor(props){
@@ -99,6 +100,7 @@ class Quiz extends React.Component {
         <Alien floatStyle="float-none" class='alienpic'/>
         <div style={{alignSelf: 'center'}}>
           <SpeechBubble
+            id="quiz-speech-bubble"
             paras={[questionElements()]}
             height='400px'
           />

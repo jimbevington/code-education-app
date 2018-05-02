@@ -1,3 +1,6 @@
-#quiz {
-  border: solid black 3px;
+#quiz-speech-bubble {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
 }
