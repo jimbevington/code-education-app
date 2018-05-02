@@ -21,26 +21,30 @@ h1 {
 
 
 #fact1 {
-  position: relative;
+  /* position: relative;
   bottom: 730px;
-  left: -30px;
+  left: -30px; */
+  max-width: 550px;
+  min-width: 550px;
 }
 
 #fact {
-  position: relative;
+  /* position: relative;
   bottom: 730px;
-  left: 450px;
+  left: 450px; */
+  max-width: 550px;
+  min-width: 550px;
 }
 
 
 #fact-alien {
 
  width: 480px;
- height: 640px;
+ height: 420px;
  padding: 0px;
- position: relative;
- bottom: 250px;
- right: 30px;
+ /* position: relative; */
+ /* bottom: 250px;
+ right: 30px; */
 
 }
 
