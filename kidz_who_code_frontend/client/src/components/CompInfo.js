@@ -4,7 +4,7 @@ import Popup from "reactjs-popup";
 
 const CompInfo = (props) => (
   <Popup
-    trigger={<button className="button" id='fact1'>
+    trigger={<button className="button" id='fact'>
        {props.facts.facts[0].info[0].question} </button>}
     modal
     >

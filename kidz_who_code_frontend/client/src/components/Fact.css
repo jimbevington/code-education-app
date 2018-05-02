@@ -18,22 +18,12 @@ h1 {
 
 }
 
-
-
-#fact1 {
-  /* position: relative;
-  bottom: 730px;
-  left: -30px; */
-  max-width: 550px;
-  min-width: 550px;
-}
-
 #fact {
   /* position: relative;
   bottom: 730px;
   left: 450px; */
-  max-width: 550px;
-  min-width: 550px;
+  max-width: 420px;
+  min-width: 420px;
 }
 
 
