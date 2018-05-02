@@ -149,9 +149,10 @@ class Game extends React.Component {
               squaredSize={this.props.squaredSize}
               handleMoveListClick={this.addMove}
               moveList={this.state.moveDirList}
+              handleGoFromMoveContainer={this.handleMove}
             />
           </div>
-          
+
           <Arrow direction="downArrow" link="Quiz" />
       </section>
     )

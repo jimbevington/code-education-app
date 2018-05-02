@@ -3,9 +3,10 @@ import './Go.css';
 
 const Go = (props) => {
   return <button
-          className="goButton"
+          // className="button"
+          id='go-button'
           onClick={props.handleClick}>
-            Go!
+            GO!
           </button>
 }
 

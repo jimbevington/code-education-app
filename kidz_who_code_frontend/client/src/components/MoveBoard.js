@@ -13,7 +13,7 @@ const MoveBoard = (props) => {
       <ul >
         {moves}
       </ul>
-      <Go handleClick={this.handleMove}/>
+      <Go handleClick={props.handleGoFromMoveBoard}/>
     </article>
   )
 }
