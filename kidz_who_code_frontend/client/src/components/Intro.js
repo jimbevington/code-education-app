@@ -21,7 +21,7 @@ const Intro = (props) => {
       <SpeechBubble paras={speechBubbleParas}/>
       <img className="divvy" src={divvy} alt="divvy"/>
       <InfoBox
-        text='Are you ready to become a developer. Lets learn what code is, program a rocket ship and test your knowledge!'
+        text="Are you ready to become a developer? Let's learn what code is, program a rocket ship and test your knowledge!"
       />
       <Arrow direction="downArrow" link="Facts"/>
     </section>
