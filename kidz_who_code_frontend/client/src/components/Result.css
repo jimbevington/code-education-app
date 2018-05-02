@@ -1,0 +1,7 @@
+.result-message-hidden {
+  visibility: hidden;
+}
+
+.result-message-visible {
+  visibility: visible;
+}

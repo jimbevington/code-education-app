@@ -2,6 +2,7 @@ import React from 'react';
 import Question from '../components/Question';
 import ScoreBoard from '../components/ScoreBoard';
 import SubmitAnswer from '../components/SubmitAnswer';
+import Result from '../components/Result';
 
 class Quiz extends React.Component {
   constructor(props){
@@ -9,18 +10,27 @@ class Quiz extends React.Component {
     this.state = {
       currentQuestion: 0,
       nextButtonVisible: 'submit-answer-button',
+      resultVisible: 'result-message-hidden',
+      resultText: 'Incorrect. Try again!',
+      buttonClass: 'button'
     }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleAnswerClick = this.handleAnswerClick.bind(this);
+    this.handleButtonClick = this.handleButtonClick.bind(this);
   }
 
   handleSubmit(){
     if(this.state.currentQuestion < this.props.facts[1].q_and_a.length){
       this.setState({nextButtonVisible: 'submit-answer-button'});
+      this.setState({resultVisible: 'result-message-hidden'});
+      // if (this.state.currentQuestion === 4) {
+      //   this.setState({nextButtonVisible: 'submit-answer-button'});
+      // }
       this.setState(prevState => ({
         currentQuestion: prevState.currentQuestion + 1,
       }));
     }
+
     // add/change class on answer text to colour green
     // display 'next question' button
     // if incorrect
@@ -28,17 +38,28 @@ class Quiz extends React.Component {
     // allow user to select another answer
   }
 
-  handleAnswerClick(e){
-    if((this.props.facts[1].q_and_a[this.state.currentQuestion].correct_answer === e.target.value)){
-      this.setState({nextButtonVisible: "submit-answer-button-visible"});
-      console.log('correct answer');
-      console.log(this.state.currentQuestion);
-      // toggle button class to display green
-    } else {
-      console.log('incorrect answer');
-      // toggle button class to display red
-    }
+  handleButtonClick(){
+      this.setState({buttonClass: 'button buttonIncorrect'});
+  }
 
+  handleAnswerClick(e){
+    if((this.props.facts[1].q_and_a[this.state.currentQuestion].correct_answer === e.target.value) && (this.state.currentQuestion === 4)){
+      this.setState({nextButtonVisible: "submit-answer-button"});
+      this.setState({resultVisible: 'result-message-hidden-visible'});
+      this.setState({resultText: 'Woo Hoo!'});
+    } else if ((this.props.facts[1].q_and_a[this.state.currentQuestion].correct_answer === e.target.value)) {
+      this.setState({resultText: 'Woo Hoo!'});
+      this.setState({resultVisible: 'result-message-hidden-visible'});
+      this.setState({nextButtonVisible: "submit-answer-button-visible"});
+
+    } else {
+      this.setState({nextButtonVisible: "submit-answer-button"});
+      this.setState({resultVisible: 'result-message-visible'});
+      this.setState({resultText: 'Incorrect. Try again!'});
+      this.handleButtonClick();
+
+      // setState to red border and unclickable
+    }
   }
 
   render(){
@@ -46,17 +67,20 @@ class Quiz extends React.Component {
       <React.Fragment>
         <h1>Quiz</h1>
         <Question
+          buttonClass={this.state.buttonClass}
           qAndAs={this.props.facts[1].q_and_a}
           currentQuestion={this.state.currentQuestion}
           handleAnswerClick={this.handleAnswerClick}
         />
         <SubmitAnswer
-          class={this.state.nextButtonVisible} handleClick={this.handleSubmit} />
-          {/* // display ScoreBoard only when all questions have been answered */}
-          {/* <ScoreBoard currentScore={this.state.currentScore} /> */}
-        </React.Fragment>
-      )
+          class={this.state.nextButtonVisible}
+          handleClick={this.handleSubmit} />
+          <Result
+            class={this.state.resultVisible}
+            text={this.state.resultText} />
+          </React.Fragment>
+        )
+      }
     }
-  }
 
-  export default Quiz;
+    export default Quiz;
