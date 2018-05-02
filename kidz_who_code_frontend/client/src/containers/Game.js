@@ -5,6 +5,8 @@ import Go from '../components/Go'
 import Heading from '../components/Heading';
 import InfoBox from '../components/InfoBox';
 import Arrow from '../components/Arrow';
+import SpeechBubble from '../components/SpeechBubble';
+import Alien from '../components/Alien';
 import './Game.css';
 
 class Game extends React.Component {
@@ -140,20 +142,24 @@ class Game extends React.Component {
           <Arrow direction="upArrow" link="Facts" />
           <Heading text="Take Divvy Home!" />
         </header>
-          <InfoBox text="Here are some instructions." />
-          <div className='game-container'>
-            <Grid
-              squaredSize={this.props.squaredSize} cellStates={this.state.cellStates}
-            />
-            <MovesContainer
-              squaredSize={this.props.squaredSize}
-              handleMoveListClick={this.addMove}
-              moveList={this.state.moveDirList}
-              handleGoFromMoveContainer={this.handleMove}
-            />
-          </div>
+        <section className='column'>
+          <SpeechBubble paras={["how to play the game"]} width='175px' />
+          <Alien floatStyle="float-none"/>
+          {/* <InfoBox text="Here are some instructions." /> */}
+        </section>
+        <div className='game-container' style={{'alignSelf': 'center'}}>
+          <Grid
+            squaredSize={this.props.squaredSize} cellStates={this.state.cellStates}
+          />
+          <MovesContainer
+            squaredSize={this.props.squaredSize}
+            handleMoveListClick={this.addMove}
+            moveList={this.state.moveDirList}
+            handleGoFromMoveContainer={this.handleMove}
+          />
+        </div>
 
-          <Arrow direction="downArrow" link="Quiz" />
+        <Arrow direction="downArrow" link="Quiz" />
       </section>
     )
   }
