@@ -91,7 +91,7 @@ class Quiz extends React.Component {
 
 
     return(
-      <section className='page'>
+      <section id="quiz" className='page'>
         <header>
           <Arrow direction="upArrow" link="Facts" />
           <Heading text='Quiz' />
