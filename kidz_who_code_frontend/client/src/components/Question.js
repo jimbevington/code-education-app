@@ -1,4 +1,5 @@
 import React from 'react';
+import './Question.css';
 
 const Question = (props) => {
 
@@ -12,7 +13,8 @@ const Question = (props) => {
 
   return(
     <article className="question">
-      <h2>Q{questionData.id}. {question}</h2>
+      <h2>Q{questionData.id}.</h2>
+      <h2>{question}</h2>
       <button
         className="button"
         onClick={props.handleAnswerClick}
