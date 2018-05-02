@@ -44,19 +44,19 @@ router.get('/', function(req, res, next) {
           },
           { id: 2,
             question: "What is code?",
-            correct_answer: "A set of rules or instructions which allows you to make things with your computer",
+            correct_answer: "A set of rules or instructions",
             incorrect_answer_1: "A type of computer",
             incorrect_answer_2: "A game"
           },
           { id: 3,
             question: "What does code look like?",
-            correct_answer: "A set of rules or instructions made up of words, numbers and symbols",
-            incorrect_answer_1: "A load of numbers all jumbled together",
+            correct_answer: "Words, numbers and symbols",
+            incorrect_answer_1: "A story in a book",
             incorrect_answer_2: "You can’t see code, it’s invisible"
           },
           { id: 4,
             question: "What is a computer bug?",
-            correct_answer: "This is when your code doesn’t work like it should",
+            correct_answer: "When your code doesn’t work like it should",
             incorrect_answer_1: "It looks like a spider and lives in your computer",
             incorrect_answer_2: "There is no such thing as a computer bug"
           },
