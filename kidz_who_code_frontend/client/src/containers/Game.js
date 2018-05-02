@@ -136,17 +136,19 @@ class Game extends React.Component {
   }
 
   render(){
+
+    const gameInstructions = [
+      'Draw Divvy\'s route home by clicking the arrows in the right order.',
+      'To move 2 squares right, click right 2 times.'
+    ]
+
     return (
       <section id="game" className="page">
         <header>
           <Arrow direction="upArrow" link="Facts" />
           <Heading text="Take Divvy Home!" />
         </header>
-        <section className='column'>
-          <SpeechBubble paras={["how to play the game"]} width='175px' />
-          <Alien floatStyle="float-none" class='alienpic'/>
-          {/* <InfoBox text="Here are some instructions." /> */}
-        </section>
+        <InfoBox paras={gameInstructions} id='game-instructions'/>
         <div className='game-container' style={{'alignSelf': 'center'}}>
           <Grid
             squaredSize={this.props.squaredSize} cellStates={this.state.cellStates}
