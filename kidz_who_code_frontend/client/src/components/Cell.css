@@ -1,7 +1,7 @@
 .cell {
   float: left;
-  width: 80px;
-  height: 80px;
+  width: 75px;
+  height: 75px;
   font-size: 1em;
   font-weight: 100;
   border: 1px inset #0052d6;

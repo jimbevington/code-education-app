@@ -1,4 +1,8 @@
 .game-container {
   display: flex;
   flex-flow: row;
+  padding: 10px;
+  border: solid black 2px;
+  background-color: #4e3145;   
+  border-radius: 15px;
 }

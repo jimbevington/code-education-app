@@ -10,7 +10,11 @@ const MovesContainer = (props) => {
         squaredSize={props.squaredSize}
         handleMoveClick={props.handleMoveListClick}
       />
-      <MoveBoard moves={props.moveList} />
+      <MoveBoard
+        moves={props.moveList}
+        handleGoFromMoveBoard={props.handleGoFromMoveContainer}
+       />
+
     </section>
   )
 }
