@@ -7,13 +7,13 @@ const SpeechBubble = (props) => {
     if (typeof text === 'string'){
       return <p key={index}>{text}</p>
     }
-    return <article key={index}>{text}</article>
+    return <article  key={index}>{text}</article>
   })
 
   return (
     <article
       className='speech-bubble'
-      style={{width: props.width}}
+      style={{width: props.width, height: props.height}}
     >
       {paras}
     </article>

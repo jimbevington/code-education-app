@@ -16,6 +16,7 @@ header {
 h1 {
   font-family: Lobster;
   text-align: center;
+  margin: 0px;
 }
 
 .app {
@@ -31,13 +32,13 @@ h1 {
   min-width: 1100px;
   max-width: 1100px;
   margin: 50px 0px;
-  /* padding-top: 20px; */
   display: flex;
   flex-flow: row;
   align-items: flex-end;
   justify-content: space-between;
   position: relative;
-  border: solid 3px black;
+  border: solid 3px lightgrey;
+  border-radius: 50px;
   background-color: #87CEFA;
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import CompInfo from "./CompInfo.js";
+import Heading from './Heading';
 import CodeInfo from "./CodeInfo.js";
 import Code from "./Code.js";
 import Order from "./Order.js";
@@ -13,7 +14,11 @@ import './Fact.css'
 
 const Fact = (props) => {
 
-  const speechBubbleText = ['Let\'s start learning! Click on each button to find out more.'];
+  const makeFactsHeading = () => {
+    return <Heading text="Let's Start Learning"/>;
+  }
+
+  const speechBubbleContents = [makeFactsHeading(), 'Click on each button to find out more.'];
 
   if(props.length === 0) return null;
   return (
@@ -21,12 +26,10 @@ const Fact = (props) => {
 
       <header>
         <Arrow direction="upArrow" link="Intro"/>
-        <h1>Fun Facts!</h1>
+        {/* <h1>Fun Facts!</h1> */}
+        <SpeechBubble paras={speechBubbleContents} width='600px' height="150px" />
       </header>
-      <section style={{display: 'flex', 'flex-flow': 'column'}}>
-        <SpeechBubble paras={speechBubbleText} />
         <Alien id='fact-alien' floatStyle="float-none" />
-      </section>
       <section style={{display: 'flex', 'flex-flow': 'column', 'margin-bottom': '55px'}}>
         <CompInfo facts={props} />
         <br />
