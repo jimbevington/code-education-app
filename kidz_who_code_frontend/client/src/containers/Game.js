@@ -144,7 +144,7 @@ class Game extends React.Component {
         </header>
         <section className='column'>
           <SpeechBubble paras={["how to play the game"]} width='175px' />
-          <Alien floatStyle="float-none"/>
+          <Alien floatStyle="float-none" class='alienpic'/>
           {/* <InfoBox text="Here are some instructions." /> */}
         </section>
         <div className='game-container' style={{'alignSelf': 'center'}}>

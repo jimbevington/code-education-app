@@ -11,7 +11,13 @@ const Alien = (props) => {
     id = props.id;
   }
 
-  const alienClasses = 'alienpic ' + props.floatStyle + ' clearfix';
+  let alienClass = ''
+
+  if(props.class){
+    alienClass = props.class;
+  }
+
+  const alienClasses = alienClass + ' ' + props.floatStyle + ' clearfix';
 
   return (
     <img

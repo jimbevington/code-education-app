@@ -17,7 +17,7 @@ const Bye = () => {
       <header>
         <Arrow direction='upArrow' link='Quiz' />
       </header>
-      <Alien floatStyle="float-none"/>
+      <Alien floatStyle="float-none" class='alienpic'/>
       <section className='column' style={{'alignSelf': 'center'}}>
         <SpeechBubble paras={bubbleContents} width='300px'/>
         <LinkImage
