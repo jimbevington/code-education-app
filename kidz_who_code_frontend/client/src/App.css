@@ -2,7 +2,7 @@ body {
   background: linear-gradient(to bottom right, #54F2F2, #645E9D);
   background-repeat: no-repeat;
   /* border: black solid; */
-  /* padding: 100px; */
+  padding-left: 100px;
 }
 
 header {
@@ -18,8 +18,16 @@ h1 {
   text-align: center;
 }
 
+.app {
+  display: flex;
+  flex-flow: row;
+  /* justify-content: center; */
+  margin: auto;
+}
+
 .page {
-  min-height: 750px;
+  min-height: 650px;
+  max-height: 650px;
   min-width: 1100px;
   max-width: 1100px;
   margin-top: 150px;
