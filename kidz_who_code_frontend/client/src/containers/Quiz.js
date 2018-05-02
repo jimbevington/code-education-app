@@ -2,6 +2,7 @@ import React from 'react';
 import Question from '../components/Question';
 import ScoreBoard from '../components/ScoreBoard';
 import SubmitAnswer from '../components/SubmitAnswer';
+import Arrow from '../components/Arrow';
 
 class Quiz extends React.Component {
   constructor(props){

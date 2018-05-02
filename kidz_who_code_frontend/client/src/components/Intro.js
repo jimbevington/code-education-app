@@ -16,7 +16,7 @@ const Intro = (props) => {
   const speechBubbleParas = ['Hi, I\'m Divvy!', 'What\'s your name?', nameForm()];
 
   return (
-    <section id='intro-page page'>
+    <section id='intro-page' className='page'>
       <Heading text='Welcome to Kidz Who Code'/>
       <SpeechBubble paras={speechBubbleParas}/>
       <img className="divvy" src={divvy} alt="divvy"/>
