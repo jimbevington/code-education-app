@@ -27,7 +27,11 @@ const Fact = (props) => {
       <header>
         <Arrow direction="upArrow" link="Intro"/>
         {/* <h1>Fun Facts!</h1> */}
-        <SpeechBubble paras={speechBubbleContents} width='600px' height="150px" />
+        <SpeechBubble
+          paras={speechBubbleContents}
+          width='650px' height="150px"
+          id='fact-speech-bubble'
+        />
       </header>
         <Alien id='fact-alien' floatStyle="float-none" />
       <section style={{display: 'flex', 'flex-flow': 'column', 'margin-bottom': '55px'}}>

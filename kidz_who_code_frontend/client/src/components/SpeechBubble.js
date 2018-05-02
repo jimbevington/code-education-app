@@ -14,6 +14,7 @@ const SpeechBubble = (props) => {
     <article
       className='speech-bubble'
       style={{width: props.width, height: props.height}}
+      id={props.id}
     >
       {paras}
     </article>

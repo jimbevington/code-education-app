@@ -1,7 +1,12 @@
 .speech-bubble{
-  border: solid 10px white;
+  border: outset 3px #303336;
   background-color: white;
   border-radius: 150px 150px 150px 3px;
   display: inline-block;
   text-align: center;
+  margin: 30px;
+}
+
+.speech-bubble p {
+  font-size: 28px;
 }
