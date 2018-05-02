@@ -13,12 +13,12 @@ import './Fact.css'
 const Fact = (props) => {
   if(props.length === 0) return null;
   return (
-    <div id='facts-container' className='page'>
+    <div id='facts-container' >
       <Arrow direction="upArrow" link="Intro"/>
       <h1>Fun Facts!</h1>
       <br />
       <p id="speechbubble">Let's start learning! Click on each button to find out more.</p>
-      <Alien />
+      <Alien id='fact-alien' floatStyle="float-none" />
        <CompInfo facts={props} />
       <br />
       <CodeInfo facts={props} />
