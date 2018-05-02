@@ -5,27 +5,43 @@
   padding: 50px;
 }
 
+
 h1 {
   font-family: Lobster;
   text-align: center;
-  font-size: 60px;
+  font-size: 80px;
+  position: relative;
+  bottom: 70px;
 
+}
+
+#fact1 {
+  position: relative;
+  bottom: 720px;
+  left: 4px;
 }
 
 .upArrow {
-  width: 150px;
-  height: 200px;
+  width: 100px;
+  height: 150px;
+  position: relative;
+  bottom: 50px;
 }
 
 .downArrow {
-  width: 150px;
-  height: 200px;
+  width: 100px;
+  height: 150px;
+  position: relative;
+  top: -690px;
 }
 
 #speechbubble{
   padding: 10px;
   border: solid 2px black;
   background-color: white;
-  border-radius: 3px 20px 20px 20px;
-  font-size: 20px
+  position: relative;
+  bottom: 140px;
+  border-radius: 20px 20px 20px 3px;
+  font-size: 35px;
+  font-family: "Roboto", Arial, sans-serif;
 }
