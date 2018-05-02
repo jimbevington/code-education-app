@@ -1,5 +1,6 @@
 import React from 'react';
 import Move from './Move';
+import Go from './Go';
 import './MoveBoard.css';
 
 const MoveBoard = (props) => {
@@ -8,9 +9,12 @@ const MoveBoard = (props) => {
   });
 
   return (
-    <ul className='move-board'>
-      {moves}
-    </ul>
+    <article className='move-board'>
+      <ul >
+        {moves}
+      </ul>
+      <Go handleClick={this.handleMove}/>
+    </article>
   )
 }
 

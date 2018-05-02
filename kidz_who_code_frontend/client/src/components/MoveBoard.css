@@ -1,7 +1,13 @@
 .move-board {
+  padding: 10px 10px 0px 15px;
+  /* padding-top: 10px;
+  padding-left: 10px; */
   margin:0px;
-  height: 354px;
+  height: 100%;
   background: #edcd2d;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
 }
 
 ul .arrow {

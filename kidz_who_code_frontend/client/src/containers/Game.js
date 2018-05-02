@@ -151,7 +151,7 @@ class Game extends React.Component {
               moveList={this.state.moveDirList}
             />
           </div>
-          <Go handleClick={this.handleMove}/>
+          
           <Arrow direction="downArrow" link="Quiz" />
       </section>
     )
