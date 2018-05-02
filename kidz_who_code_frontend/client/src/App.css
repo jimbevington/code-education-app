@@ -23,6 +23,10 @@ input {
   font-size: 22px;
   border-radius: 10px;
   margin-bottom: 8px;
+  margin-right: 8px;
+}
+
+input[type='text'] {
   width: 150px;
 }
 
