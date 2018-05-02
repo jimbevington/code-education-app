@@ -8,6 +8,7 @@ const LinkImage = (props) => {
         src={props.img}
         alt={props.alt}
         width={props.width}
+        style={{display: 'inline-block'}}
       />
     </a>
   )

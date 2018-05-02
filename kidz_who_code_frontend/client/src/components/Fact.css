@@ -21,23 +21,6 @@ h1 {
   left: 4px;
 }
 
-#fact {
-  position: relative;
-  bottom: 720px;
-  left: 400px;
-}
-
-
-.alienpic {
-
- width: 400px;
- height: 600px;
- padding: 0px;
- position: relative;
- bottom: 290px;
-
-}
-
 .upArrow {
   width: 100px;
   height: 150px;

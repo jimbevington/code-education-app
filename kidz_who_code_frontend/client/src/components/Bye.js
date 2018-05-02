@@ -4,7 +4,6 @@ import Alien from './Alien';
 import SpeechBubble from './SpeechBubble';
 import LinkImage from './LinkImage';
 import codeclan from './public/codeclan-logo.png';
-import './Bye.css';
 
 const Bye = () => {
 
@@ -14,16 +13,20 @@ const Bye = () => {
   const bubbleContents = [wellDone, signUp];
 
   return (
-    <section id="bye page">
-      <Arrow direction='upArrow' link='Quiz' />
-      <SpeechBubble paras={bubbleContents} width='300px'/>
-      <LinkImage
-        href="https://codeclan.com/"
-        img={codeclan}
-        alt="Codeclan Logo"
-        width='400px'
-      />
-      <Alien floatStyle="float-left"/>
+    <section id="bye" className="page">
+      <header>
+        <Arrow direction='upArrow' link='Quiz' />
+      </header>
+      <Alien floatStyle="float-none"/>
+      <section className='column' style={{'alignSelf': 'center'}}>
+        <SpeechBubble paras={bubbleContents} width='300px'/>
+        <LinkImage
+          href="https://codeclan.com/"
+          img={codeclan}
+          alt="Codeclan Logo"
+          width='400px'
+        />
+      </section>
       <Arrow direction="rightArrow" link='Intro' />
     </section>
   )

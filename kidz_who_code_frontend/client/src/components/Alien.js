@@ -1,5 +1,6 @@
 import React from 'react';
 import alien from './public/divvy.svg';
+import './Alien.css';
 
 
 const Alien = (props) => {
