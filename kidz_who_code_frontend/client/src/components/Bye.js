@@ -19,17 +19,17 @@ const Bye = () => {
       <header>
         <Arrow direction='upArrow' link='Quiz' />
       </header>
-      <Alien floatStyle="float-none" class='alienpic'/> 
+      <Alien floatStyle="float-none" class='alienpic'/>
 
       {/* <section className='column' style={{'alignSelf': 'center'}}>
-        <SpeechBubble paras={bubbleContents} width='300px'/>
-        <LinkImage
+        <SpeechBubble paras={bubbleContents} width='300px'/> */}
+        {/* <LinkImage
           href="https://codeclan.com/"
           img={codeclan}
           alt="Codeclan Logo"
           width='400px'
-        />
-      </section> */}
+        /> */}
+      {/* </section> */}
       <Arrow direction="rightArrow" link='Intro' />
     </section>
   )
