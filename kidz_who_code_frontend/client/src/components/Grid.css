@@ -5,4 +5,6 @@
 
 .grid {
   display: inline-block;
+  min-width: 457px;
+  max-width: 457px;
 }

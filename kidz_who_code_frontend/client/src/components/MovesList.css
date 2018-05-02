@@ -1,5 +1,4 @@
 .moves-list {
-  /* width: 380px; */
   height: 100px;
   display: flex;
   flex-flow: row;
