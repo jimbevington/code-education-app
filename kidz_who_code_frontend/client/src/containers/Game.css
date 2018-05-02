@@ -1,7 +1,4 @@
 .game-container {
-  display: table;
-  /* flex-flow: column; */
-  max-height:500px;
-  width: 100%;
-  border: solid black 3px;
+  display: flex;
+  flex-flow: row;
 }

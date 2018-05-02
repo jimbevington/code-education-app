@@ -3,4 +3,5 @@
   border: solid 10px white;
   background-color: white;
   border-radius: 150px 150px 150px 3px;
+  display: inline-block;
 }

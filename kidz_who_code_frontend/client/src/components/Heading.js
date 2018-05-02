@@ -3,9 +3,7 @@ import './Heading.css';
 
 const Heading = (props) => {
   return (
-    <div>
-      <h1 id="title">{props.text}</h1>
-    </div>
+      <h1 className="title">{props.text}</h1>
   )
 }
 

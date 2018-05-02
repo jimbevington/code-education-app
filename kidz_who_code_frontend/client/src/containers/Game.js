@@ -135,22 +135,24 @@ class Game extends React.Component {
 
   render(){
     return (
-      <section id="game page">
-        <Arrow direction="upArrow" link="Facts" />
-        <Heading text="Take Divvy Home!" />
-        <InfoBox text="Here are some instructions." />
-        <div className='game-container'>
-          <Grid
-            squaredSize={this.props.squaredSize} cellStates={this.state.cellStates}
-          />
-          <MovesContainer
-            squaredSize={this.props.squaredSize}
-            handleMoveListClick={this.addMove}
-            moveList={this.state.moveDirList}
-          />
-        </div>
-        <Go handleClick={this.handleMove}/>
-        <Arrow direction="downArrow" link="Quiz" />
+      <section id="game" className="page">
+        <header>
+          <Arrow direction="upArrow" link="Facts" />
+          <Heading text="Take Divvy Home!" />
+        </header>
+          <InfoBox text="Here are some instructions." />
+          <div className='game-container'>
+            <Grid
+              squaredSize={this.props.squaredSize} cellStates={this.state.cellStates}
+            />
+            <MovesContainer
+              squaredSize={this.props.squaredSize}
+              handleMoveListClick={this.addMove}
+              moveList={this.state.moveDirList}
+            />
+          </div>
+          <Go handleClick={this.handleMove}/>
+          <Arrow direction="downArrow" link="Quiz" />
       </section>
     )
   }

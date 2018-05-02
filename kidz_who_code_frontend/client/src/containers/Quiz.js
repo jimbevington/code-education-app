@@ -35,7 +35,7 @@ class Quiz extends React.Component {
 
   render(){
     return(
-      <section id="quiz page">
+      <section id="quiz" className="page">
         <Arrow direction="upArrow" link="Game" />
         <h1>Quiz</h1>
         <Question
