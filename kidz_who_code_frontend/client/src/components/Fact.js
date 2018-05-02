@@ -15,7 +15,7 @@ import './Fact.css'
 const Fact = (props) => {
 
   const makeFactsHeading = () => {
-    return <Heading text="Let's Start Learning"/>;
+    return <Heading id="fact-heading" text="Let's Start Learning"/>;
   }
 
   const speechBubbleContents = [makeFactsHeading(), 'Click on each button to find out more.'];

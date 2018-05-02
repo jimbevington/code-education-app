@@ -56,9 +56,9 @@ router.get('/', function(req, res, next) {
           },
           { id: 4,
             question: "What is a computer bug?",
-            correct_answer: "When your code doesn’t work like it should",
-            incorrect_answer_1: "It looks like a spider and lives in your computer",
-            incorrect_answer_2: "There is no such thing as a computer bug"
+            correct_answer: "When your code doesn’t work properly",
+            incorrect_answer_1: "A spider that lives in your computer",
+            incorrect_answer_2: "There is no such thing"
           },
           { id: 5,
             question: "Does it matter what order you type your code in?",
