@@ -9,6 +9,8 @@ header {
   position:absolute;
   top: 0px;
   left: 40px;
+  width: 100%;
+  display: flex;
 }
 
 h1 {

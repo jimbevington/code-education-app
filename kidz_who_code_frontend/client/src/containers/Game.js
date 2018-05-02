@@ -140,7 +140,7 @@ class Game extends React.Component {
           <Arrow direction="upArrow" link="Facts" />
           <Heading text="Take Divvy Home!" />
         </header>
-          {/* <InfoBox text="Here are some instructions." /> */}
+          <InfoBox text="Here are some instructions." />
           <div className='game-container'>
             <Grid
               squaredSize={this.props.squaredSize} cellStates={this.state.cellStates}
