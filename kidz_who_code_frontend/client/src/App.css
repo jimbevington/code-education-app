@@ -5,14 +5,30 @@ body {
   padding: 100px;
 }
 
+header {
+  position:absolute;
+  top: 0px;
+  left: 40px;
+  width: 100%;
+  display: flex;
+}
+
 h1 {
   font-family: Lobster;
   text-align: center;
 }
 
 .page {
+  min-height: 750px;
+  min-width: 900px;
   margin-top: 150px;
   margin-bottom: 30px;
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  border: solid 3px black;
 }
 
 .float-left {
@@ -27,4 +43,9 @@ h1 {
     content: "";
     clear: both;
     display: table;
+}
+
+.column {
+  display: flex;
+  flex-flow: column;
 }

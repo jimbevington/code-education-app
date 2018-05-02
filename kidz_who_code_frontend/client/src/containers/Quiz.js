@@ -44,7 +44,8 @@ class Quiz extends React.Component {
 
   render(){
     return(
-      <React.Fragment>
+      <section id="quiz" className="page">
+        <Arrow direction="upArrow" link="Game" />
         <h1>Quiz</h1>
         <Question
           qAndAs={this.props.facts[1].q_and_a}
@@ -54,7 +55,7 @@ class Quiz extends React.Component {
         <SubmitAnswer handleClick={this.handleSubmit} />
         // display ScoreBoard only when all questions have been answered
         {/* <ScoreBoard currentScore={this.state.currentScore} /> */}
-      </React.Fragment>
+      </section>
     )
   }
 }
