@@ -29,7 +29,9 @@ class EnterYourName extends React.Component{
 
   render(){
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form
+        onSubmit={this.handleSubmit}
+        style={{margin: '25px'}}>
         <input
           type="text"
           name="name"

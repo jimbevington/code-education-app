@@ -19,6 +19,13 @@ h1 {
   margin: 0px;
 }
 
+input {
+  font-size: 22px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  width: 150px;
+}
+
 .app {
   display: flex;
   flex-flow: row;

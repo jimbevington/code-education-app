@@ -1,5 +1,7 @@
-#intro-page {
-  /* border: 10px black solid; */
-  /* padding: 40px; */
-  background-color: #503047;
+#kidz-who-code-title {
+  justify-content: center;
+}
+
+#site-title {
+  font-size: 100px;
 }
