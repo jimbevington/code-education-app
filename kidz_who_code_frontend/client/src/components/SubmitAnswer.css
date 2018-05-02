@@ -1,0 +1,8 @@
+.submit-answer-button {
+  /* display: none; */
+  visibility: hidden;
+}
+
+.submit-answer-button-visible {
+  visibility: visible;
+}
