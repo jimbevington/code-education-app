@@ -1,4 +1,5 @@
 import React from 'react';
+import Heading from '../components/Heading';
 import Question from '../components/Question';
 import ScoreBoard from '../components/ScoreBoard';
 import SubmitAnswer from '../components/SubmitAnswer';
@@ -64,8 +65,10 @@ class Quiz extends React.Component {
 
   render(){
     return(
-      <React.Fragment>
-        <h1>Quiz</h1>
+      <section className='page'>
+        <header>
+        <Heading text='Quiz' />
+        </header>
         <Question
           buttonClass={this.state.buttonClass}
           qAndAs={this.props.facts[1].q_and_a}
@@ -78,7 +81,7 @@ class Quiz extends React.Component {
           <Result
             class={this.state.resultVisible}
             text={this.state.resultText} />
-          </React.Fragment>
+          </section>
         )
       }
     }
