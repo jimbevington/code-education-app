@@ -1,5 +1,8 @@
 import React from 'react';
 import Heading from '../components/Heading';
+import Arrow from '../components/Arrow';
+import Alien from '../components/Alien';
+import SpeechBubble from '../components/SpeechBubble';
 import Question from '../components/Question';
 import ScoreBoard from '../components/ScoreBoard';
 import SubmitAnswer from '../components/SubmitAnswer';
@@ -64,25 +67,45 @@ class Quiz extends React.Component {
   }
 
   render(){
-    return(
-      <section className='page'>
-        <header>
-        <Heading text='Quiz' />
-        </header>
-        <Question
-          buttonClass={this.state.buttonClass}
-          qAndAs={this.props.facts[1].q_and_a}
-          currentQuestion={this.state.currentQuestion}
-          handleAnswerClick={this.handleAnswerClick}
-        />
-        <SubmitAnswer
-          class={this.state.nextButtonVisible}
-          handleClick={this.handleSubmit} />
+
+
+    const questionElements = () => {
+      return (
+        <React.Fragment>
+          <Question
+            buttonClass={this.state.buttonClass}
+            qAndAs={this.props.facts[1].q_and_a}
+            currentQuestion={this.state.currentQuestion}
+            handleAnswerClick={this.handleAnswerClick}
+          />
+          <SubmitAnswer
+            class={this.state.nextButtonVisible}
+            handleClick={this.handleSubmit} />
           <Result
             class={this.state.resultVisible}
             text={this.state.resultText} />
-          </section>
-        )
+        </React.Fragment>
+      )
+    }
+
+
+
+    return(
+      <section className='page'>
+        <header>
+          <Arrow direction="upArrow" link="Facts" />
+          <Heading text='Quiz' />
+        </header>
+        <Alien floatStyle="float-none" class='alienpic'/>
+        <div style={{alignSelf: 'center'}}>
+          <SpeechBubble
+            paras={[questionElements()]}
+            height='400px'
+          />
+        </div>
+        <Arrow direction="downArrow" link="Quiz" />
+      </section>
+      )
       }
     }
 
