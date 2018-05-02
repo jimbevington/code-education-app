@@ -2,11 +2,14 @@ body {
   margin: 0;
   padding: 10px;
   font-family: sans-serif;
+  cursor: url('./public/rocketcursor.png'), auto;
+
 }
 
 .divvy {
   height: 650px;
   width: 650px;
+  cursor: url('./public/aliencursor.png'), auto;
 }
 
 .button {
@@ -28,6 +31,8 @@ body {
   border-radius: 15px 15px 15px 15px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  cursor: url('./public/aliencursor.png'), auto;
+
 }
 
 .buttonCorrect {

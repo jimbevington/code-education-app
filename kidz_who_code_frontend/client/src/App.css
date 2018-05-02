@@ -3,6 +3,7 @@ body {
   background-repeat: no-repeat;
   /* border: black solid; */
   padding-left: 100px;
+  cursor: './public/if_rocket-fly_46206.png', auto;
 }
 
 header {
@@ -11,6 +12,7 @@ header {
   left: 40px;
   width: 100%;
   display: flex;
+
 }
 
 h1 {
