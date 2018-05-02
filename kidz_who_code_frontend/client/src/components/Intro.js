@@ -16,18 +16,20 @@ const Intro = (props) => {
 
   const speechBubbleParas = ['Hi, I\'m Divvy!', 'What\'s your name?', nameForm()];
 
+  const welcomeInfo = ['Oh no! Divvy has crash-landed on earth and can\'t work his rocket!', 'Can you help?', 'Learn about computers so that you can program his rocket and send him home.', 'Click the arrow to accept this mission!']
+
   return (
     <section id='intro-page' className='page'>
       <header id="kidz-who-code-title">
         <Heading id='site-title' text='Kidz Who Code'/>
       </header>
-      <Alien floatStyle="float-none" class='alienpic'/>
-      <div style={{'alignSelf': 'center'}}>
-        <SpeechBubble paras={speechBubbleParas} width="300px"/>
+      <div style={{display: 'flex', 'flex-flow': 'column'}}>
+        <SpeechBubble id='intro-speech' paras={speechBubbleParas} width="300px"/>
+        <Alien floatStyle="float-none" class='alienpic'/>
       </div>
-      {/* <img className="divvy" src={divvy} alt="divvy"/> */}
       <InfoBox
-        text="Are you ready to become a developer? Let's learn what code is, program a rocket ship and test your knowledge!"
+        paras={welcomeInfo}
+        id='intro-info'
       />
       <Arrow direction="downArrow" link="Facts"/>
     </section>

@@ -1,0 +1,9 @@
+.infobox {
+  font-size: 28px;
+  background-color: #64639d;
+  color: white;
+  text-shadow: 2px 2px black;
+  border-radius: 50px;
+  padding: 35px;
+  border: outset 3px #303336;
+}

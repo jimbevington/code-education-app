@@ -5,3 +5,14 @@
 #site-title {
   font-size: 100px;
 }
+
+#intro-speech {
+  margin-bottom: 0px;
+}
+
+#intro-info {
+  /* align-self: center; */
+  margin-bottom: 50px;
+  width: 470px;
+  text-align: center;
+}
