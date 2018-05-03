@@ -85,7 +85,7 @@ class Quiz extends React.Component {
       <section id="quiz" className='page'>
         <header>
           <Arrow direction="upArrow" link="#game" />
-          <Heading text='Quiz' />
+          <Heading id='quiz-title'text='Quiz' />
         </header>
         <Alien floatStyle="float-none" class='alienpic'/>
         <div style={{alignSelf: 'center'}}>

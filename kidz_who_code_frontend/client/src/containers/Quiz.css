@@ -8,3 +8,9 @@
   max-height: 500px;
   min-height: 500px;
 }
+
+#quiz-title {
+font-size: 80px;
+margin-left: 40px;
+margin-top: 20px;
+}

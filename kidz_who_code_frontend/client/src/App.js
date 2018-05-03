@@ -36,7 +36,7 @@ class App extends Component {
         <Fact facts={this.state.facts}/>
         <Game squaredSize={6}/>
         <Quiz facts={this.state.facts} />
-        <Bye />
+        <Bye />  
       </div>
     );
   }

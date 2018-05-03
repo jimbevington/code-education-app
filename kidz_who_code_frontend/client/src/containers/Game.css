@@ -20,3 +20,10 @@
   padding: 10px;
   align-self: center;
 }
+
+
+#game-title {
+  font-size: 55px;
+  margin-left: 40px;
+  margin-top: 20px;
+}
