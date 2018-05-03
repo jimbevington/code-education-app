@@ -15,7 +15,6 @@
 
 
 #fact-alien {
-
  width: 450px;
  height: 420px;
  padding: 0px;
@@ -23,6 +22,9 @@
 
 
 #fact-speech-bubble {
+  display: flex;
+  flex-flow:column;
+  justify-content: center;
   position: absolute;
   right: 30px;
 }

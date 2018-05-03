@@ -95,3 +95,7 @@ input[type='text'] {
   display: flex;
   flex-flow: column;
 }
+
+header .heading {
+  
+}

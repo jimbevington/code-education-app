@@ -1,4 +1,16 @@
+
+.question {
+  max-width: 350px;
+}
+
+.question button {
+  font-size: 18px;
+  margin: 8px 5px;
+  border-width: 5px;
+  line-height: 1.5em;
+
 #answer-button {
   display: block;
   margin: 0 0 10px 0;
+
 }

@@ -7,6 +7,7 @@ import Question from '../components/Question';
 import ScoreBoard from '../components/ScoreBoard';
 import SubmitAnswer from '../components/SubmitAnswer';
 import Result from '../components/Result';
+import './Quiz.css';
 
 class Quiz extends React.Component {
   constructor(props){
@@ -15,7 +16,7 @@ class Quiz extends React.Component {
       currentQuestion: 0,
       nextButtonVisible: 'submit-answer-button',
       resultVisible: 'result-message-hidden',
-      resultText: 'Incorrect. Try again!',
+      resultText: 'Try again!',
       buttonClass: 'button'
     }
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -50,7 +51,7 @@ class Quiz extends React.Component {
     } else {
       this.setState({nextButtonVisible: "submit-answer-button"});
       this.setState({resultVisible: 'result-message-visible'});
-      this.setState({resultText: 'Incorrect. Try again!'});
+      this.setState({resultText: 'Try again!'});
       this.handleButtonClick();
 
       // setState to red border and unclickable
@@ -89,6 +90,7 @@ class Quiz extends React.Component {
         <Alien floatStyle="float-none" class='alienpic'/>
         <div style={{alignSelf: 'center'}}>
           <SpeechBubble
+            id="quiz-speech-bubble"
             paras={[questionElements()]}
             height='400px'
           />

@@ -12,12 +12,31 @@ const Question = (props) => {
   // debugger;
 
   return(
-    <React.Fragment>
-      <h2>Q{questionData.id}. {question}</h2>
-      <button className="button" id="answer-button" onClick={props.handleAnswerClick} value={correctAnswer}>{correctAnswer}</button>
-      <button className="button" id="answer-button" onClick={props.handleAnswerClick} value={incorrectAnswer1}>{incorrectAnswer1}</button>
-      <button className="button" id="answer-button" onClick={props.handleAnswerClick} value={incorrectAnswer2}>{incorrectAnswer2}</button>
-    </React.Fragment>
+    <article className="question">
+      <h2>Q{questionData.id}.</h2>
+      <h2>{question}</h2>
+      <button
+        className="button"
+        onClick={props.handleAnswerClick}
+        id="answer-button"
+        value={correctAnswer}>
+        {correctAnswer}
+      </button>
+      <button
+        className="button"
+        onClick={props.handleAnswerClick}
+        id="answer-button"
+        value={incorrectAnswer1}>
+        {incorrectAnswer1}
+      </button>
+      <button
+        className="button"
+        onClick={props.handleAnswerClick}
+        id="answer-button"
+        value={incorrectAnswer2}>
+        {incorrectAnswer2}
+      </button>
+    </article>
   )
 }
 
