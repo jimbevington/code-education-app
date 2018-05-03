@@ -15,7 +15,7 @@ const Bye = () => {
   return (
     <section id="bye" className="page">
       <header>
-        <Arrow direction='upArrow' link='Quiz' />
+        <Arrow direction='upArrow' link='#quiz' />
       </header>
       <Alien floatStyle="float-none" class='alienpic'/>
       <section className='column' style={{'alignSelf': 'center'}}>
@@ -27,7 +27,7 @@ const Bye = () => {
           width='400px'
         />
       </section>
-      <Arrow direction="rightArrow" link='Intro' />
+      <Arrow direction="rightArrow" link='#intro-page' />
     </section>
   )
 }

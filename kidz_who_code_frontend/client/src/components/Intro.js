@@ -31,7 +31,7 @@ const Intro = (props) => {
         paras={welcomeInfo}
         id='intro-info'
       />
-      <Arrow direction="downArrow" link="Facts"/>
+      <Arrow direction="downArrow" link="#fact-page"/>
     </section>
   )
 }

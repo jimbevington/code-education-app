@@ -139,7 +139,7 @@ class Game extends React.Component {
     return (
       <section id="game" className="page">
         <header>
-          <Arrow direction="upArrow" link="Facts" />
+          <Arrow direction="upArrow" link="#fact-page" />
           <Heading text="Take Divvy Home!" />
         </header>
         <section className='column'>
@@ -159,7 +159,7 @@ class Game extends React.Component {
           />
         </div>
 
-        <Arrow direction="downArrow" link="Quiz" />
+        <Arrow direction="downArrow" link="#quiz" />
       </section>
     )
   }
