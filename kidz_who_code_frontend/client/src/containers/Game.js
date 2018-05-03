@@ -13,6 +13,16 @@ import './Game.css';
 class Game extends React.Component {
   constructor(props){
     super(props);
+    // this.blankSettings = {
+    //   gridSize: (this.props.squaredSize ** 2) - 1,
+    //   isWon: false,
+    //   cellStates: [],
+    //   goalPosition: null,
+    //   playerPosition: null,
+    //   moveList: [],
+    //   moveDirList: [],
+    //   popupClass: 'hidden'
+    // }
     this.state = {
       gridSize: (this.props.squaredSize ** 2) - 1,
       isWon: false,
@@ -23,7 +33,7 @@ class Game extends React.Component {
       moveDirList: [],
       popupClass: 'hidden'
     }
-    this.initialState = this.state;
+    // this.state = this.blankSettings;
     this.handleMove = this.handleMove.bind(this);
     this.addMove = this.addMove.bind(this);
     this.resetGame = this.resetGame.bind(this);
@@ -142,7 +152,17 @@ class Game extends React.Component {
   }
 
   resetGame(){
-    this.setState(this.initialState);
+    this.setState(
+      {
+        gridSize: (this.props.squaredSize ** 2) - 1,
+        isWon: false,
+        cellStates: [],
+        goalPosition: null,
+        playerPosition: null,
+        moveList: [],
+        moveDirList: [],
+        popupClass: 'hidden'
+      }, this.componentDidMount);
   }
 
   render(){
