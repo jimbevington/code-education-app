@@ -131,14 +131,10 @@ class Game extends React.Component {
 
   checkWon(){
     if (this.state.playerPosition === this.state.goalPosition){
-      this.setState({isWon: true, popupClass: ''}, this.declareWinner);
+      this.setState({isWon: true, popupClass: ''});
     } else {
       this.setState({popupClass: ''});
     }
-  }
-
-  declareWinner(){
-    console.log('you won!');
   }
 
   resetGame(){
@@ -158,7 +154,15 @@ class Game extends React.Component {
 
   render(){
 
-    const completeMessage = ['Awesome!', 'You got Divvy home safe & sound!'];
+    const completeButton = () => {
+      return (
+        <a href="#quiz">
+          <button id='next-page-button'>Now, Test Your Knowledge</button>
+        </a>
+        )
+    }
+    const completeMessage = ['Awesome!', completeButton()];
+
     const tryAgainButton = () => {
       return <button id='reset-game' onClick={this.resetGame}>Try Again</button>
     }
