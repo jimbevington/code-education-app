@@ -146,7 +146,7 @@ class Game extends React.Component {
       <section id="game" className="page">
         <header>
           <Arrow direction="upArrow" link="#fact-page" />
-          <Heading text="Take Divvy Home!" />
+          <Heading id='game-title' text="Take Divvy Home!" />
         </header>
         <InfoBox paras={gameInstructions} id='game-instructions'/>
         <div className='game-container' style={{'alignSelf': 'center'}}>
