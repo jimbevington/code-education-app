@@ -50,7 +50,7 @@ class Quiz extends React.Component {
     if((this.props.facts[1].q_and_a[this.state.currentQuestion].correct_answer === e.target.value) && (this.state.currentQuestion === 4)){
       this.setState({nextButtonVisible: "submit-answer-button"});
       this.setState({resultVisible: 'result-message-hidden-visible'});
-      this.setState({resultText: 'Woo Hoo!'});
+      this.setState({resultText: 'Well Done! Full Marks!'});
     } else if ((this.props.facts[1].q_and_a[this.state.currentQuestion].correct_answer === e.target.value)) {
       this.setState({resultText: 'Woo Hoo!'});
       this.setState({resultVisible: 'result-message-hidden-visible'});
