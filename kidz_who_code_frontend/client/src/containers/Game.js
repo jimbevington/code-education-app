@@ -7,6 +7,7 @@ import InfoBox from '../components/InfoBox';
 import Arrow from '../components/Arrow';
 import SpeechBubble from '../components/SpeechBubble';
 import Alien from '../components/Alien';
+import Popup from '../components/Popup';
 import './Game.css';
 
 class Game extends React.Component {
@@ -160,8 +161,10 @@ class Game extends React.Component {
             handleGoFromMoveContainer={this.handleMove}
           />
         </div>
+        <Popup />
 
         <Arrow direction="downArrow" link="#quiz" />
+
       </section>
     )
   }

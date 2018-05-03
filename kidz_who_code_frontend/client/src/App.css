@@ -97,5 +97,9 @@ input[type='text'] {
 }
 
 header .heading {
-  
+
+}
+
+.hidden {
+  /* display: none; */
 }
