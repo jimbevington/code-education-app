@@ -7,6 +7,7 @@ import InfoBox from '../components/InfoBox';
 import Arrow from '../components/Arrow';
 import SpeechBubble from '../components/SpeechBubble';
 import Alien from '../components/Alien';
+import Popup from '../components/Popup';
 import './Game.css';
 
 class Game extends React.Component {
@@ -19,7 +20,8 @@ class Game extends React.Component {
       goalPosition: null,
       playerPosition: null,
       moveList: [],
-      moveDirList: []
+      moveDirList: [],
+      popupClass: 'hidden'
     }
     this.handleMove = this.handleMove.bind(this);
     this.addMove = this.addMove.bind(this);
@@ -127,7 +129,9 @@ class Game extends React.Component {
 
   checkWon(){
     if (this.state.playerPosition === this.state.goalPosition){
-      this.setState({isWon: true}, this.declareWinner);
+      this.setState({isWon: true, popupClass: ''}, this.declareWinner);
+    } else {
+      this.setState({popupClass: ''});
     }
   }
 
@@ -136,6 +140,13 @@ class Game extends React.Component {
   }
 
   render(){
+
+    const completeMessage = ['Awesome!', 'You got Divvy home safe & sound!'];
+    const tryAgainMessage = ['Almost there!', 'Try Again'];
+
+    let popupMessage;
+
+    this.state.isWon ? popupMessage = completeMessage : popupMessage = tryAgainMessage
 
     const gameInstructions = [
       'Draw Divvy\'s route home by clicking the arrows in the right order.',
@@ -160,8 +171,10 @@ class Game extends React.Component {
             handleGoFromMoveContainer={this.handleMove}
           />
         </div>
+        <Popup paras={popupMessage} class={this.state.popupClass}/>
 
         <Arrow direction="downArrow" link="#quiz" />
+
       </section>
     )
   }
