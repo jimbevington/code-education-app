@@ -7,7 +7,7 @@ const SubmitAnswer = (props) => {
       id="submit-answer-button"
       className={props.class}
       onClick={props.handleClick}>
-      Next Question
+      Next
     </button>
   )
 }

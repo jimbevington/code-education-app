@@ -3,6 +3,20 @@
   flex-flow: row;
   padding: 10px;
   border: solid black 2px;
-  background-color: #4e3145;   
+  background-color: #4e3145;
   border-radius: 15px;
+}
+
+#game-instructions {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-content: center;
+  height: 350px;
+  width: 200px;
+  margin-left:40px;
+  position: relative;
+  font-size: 22px;
+  padding: 10px;
+  align-self: center;
 }

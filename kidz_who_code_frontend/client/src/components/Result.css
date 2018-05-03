@@ -5,3 +5,19 @@
 .result-message-visible {
   visibility: visible;
 }
+
+#question-result {
+  position: absolute;
+  /* background-color: chartreuse; */
+  padding: 25px;
+  border-radius: 25px;
+  margin: none;
+  top: 320px;
+  right: 555px;
+  font-style: italic;
+  font-size: 35px;
+  transform: skewY(-25deg);
+  color: black;
+  font:
+
+}
