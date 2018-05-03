@@ -97,8 +97,10 @@ input[type='text'] {
 }
 
 header .heading {
-
+  font-family: 'Gugi', cursive;
+  text-shadow: 2px 2px 5px #333;
 }
+
 
 .hidden {
   display: none;
