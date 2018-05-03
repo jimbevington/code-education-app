@@ -6,6 +6,7 @@ import SpeechBubble from './SpeechBubble';
 import Arrow from './Arrow';
 import EnterYourName from '../containers/EnterYourName';
 import Alien from './Alien';
+import Logo from './public/LogoMakr_0NEgHv.png'
 import './Intro.css';
 
 const Intro = (props) => {
@@ -21,7 +22,8 @@ const Intro = (props) => {
   return (
     <section id='intro-page' className='page'>
       <header id="kidz-who-code-title">
-        <Heading id='site-title' text='Kidz Who Code'/>
+        {/* <Heading id='site-title' text='Kidz Who Code'/> */}
+        <img src={Logo} alt="logo"/>
       </header>
       <div style={{display: 'flex', 'flex-flow': 'column'}}>
         <SpeechBubble id='intro-speech' paras={speechBubbleParas} width="300px"/>
