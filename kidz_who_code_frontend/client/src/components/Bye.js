@@ -29,7 +29,7 @@ const Bye = () => {
           alt="Codeclan Logo"
           width='400px'
         />
-      </section>
+      </section>*/}
       <Arrow direction="rightArrow" link='#intro-page' />
     </section>
   )
