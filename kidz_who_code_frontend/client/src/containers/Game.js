@@ -23,8 +23,10 @@ class Game extends React.Component {
       moveDirList: [],
       popupClass: 'hidden'
     }
+    // this.state = this.blankSettings;
     this.handleMove = this.handleMove.bind(this);
     this.addMove = this.addMove.bind(this);
+    this.resetGame = this.resetGame.bind(this);
   }
 
   componentDidMount(){
@@ -129,20 +131,47 @@ class Game extends React.Component {
 
   checkWon(){
     if (this.state.playerPosition === this.state.goalPosition){
-      this.setState({isWon: true, popupClass: ''}, this.declareWinner);
+      this.setState({isWon: true, popupClass: ''});
     } else {
       this.setState({popupClass: ''});
     }
   }
 
-  declareWinner(){
-    console.log('you won!');
+  resetGame(){
+    this.setState(
+      // not very DRY but running out of time and alternatives not working
+      {
+        gridSize: (this.props.squaredSize ** 2) - 1,
+        isWon: false,
+        cellStates: [],
+        goalPosition: null,
+        playerPosition: null,
+        moveList: [],
+        moveDirList: [],
+        popupClass: 'hidden'
+      }, this.componentDidMount);
   }
 
   render(){
 
-    const completeMessage = ['Awesome!', 'You got Divvy home safe & sound!'];
-    const tryAgainMessage = ['Almost there!', 'Try Again'];
+    const completeButton = () => {
+      return (
+        <a href="#quiz">
+          <button
+            id='next-page-button'
+            onClick={this.resetGame}
+          >
+            Now, Test Your Knowledge
+          </button>
+        </a>
+        )
+    }
+    const completeMessage = ['Awesome!', completeButton()];
+
+    const tryAgainButton = () => {
+      return <button id='reset-game' onClick={this.resetGame}>Try Again</button>
+    }
+    const tryAgainMessage = ['Almost there!', tryAgainButton()];
 
     let popupMessage;
 
