@@ -6,7 +6,7 @@ import SpeechBubble from './SpeechBubble';
 import Arrow from './Arrow';
 import EnterYourName from '../containers/EnterYourName';
 import Alien from './Alien';
-import Logo from './public/LogoMakr_0XSTbr.png'
+import Logo from './public/LogoMakr_0NEgHv.png'
 import './Intro.css';
 
 const Intro = (props) => {
