@@ -23,8 +23,10 @@ class Game extends React.Component {
       moveDirList: [],
       popupClass: 'hidden'
     }
+    this.initialState = this.state;
     this.handleMove = this.handleMove.bind(this);
     this.addMove = this.addMove.bind(this);
+    this.resetGame = this.resetGame.bind(this);
   }
 
   componentDidMount(){
@@ -139,10 +141,17 @@ class Game extends React.Component {
     console.log('you won!');
   }
 
+  resetGame(){
+    this.setState(this.initialState);
+  }
+
   render(){
 
     const completeMessage = ['Awesome!', 'You got Divvy home safe & sound!'];
-    const tryAgainMessage = ['Almost there!', 'Try Again'];
+    const tryAgainButton = () => {
+      return <button id='reset-game' onClick={this.resetGame}>Try Again</button>
+    }
+    const tryAgainMessage = ['Almost there!', tryAgainButton()];
 
     let popupMessage;
 
