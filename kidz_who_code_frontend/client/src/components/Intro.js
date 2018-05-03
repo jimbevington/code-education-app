@@ -1,6 +1,4 @@
 import React from 'react';
-import Heading from './Heading';
-import divvy from './public/divvy.svg';
 import InfoBox from './InfoBox'
 import SpeechBubble from './SpeechBubble';
 import Arrow from './Arrow';

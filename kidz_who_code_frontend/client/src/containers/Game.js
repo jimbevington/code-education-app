@@ -1,12 +1,9 @@
 import React from 'react';
 import Grid from '../components/Grid';
 import MovesContainer from '../components/MovesContainer'
-import Go from '../components/Go'
 import Heading from '../components/Heading';
 import InfoBox from '../components/InfoBox';
 import Arrow from '../components/Arrow';
-import SpeechBubble from '../components/SpeechBubble';
-import Alien from '../components/Alien';
 import Popup from '../components/Popup';
 import './Game.css';
 

@@ -4,9 +4,9 @@ import Arrow from '../components/Arrow';
 import Alien from '../components/Alien';
 import SpeechBubble from '../components/SpeechBubble';
 import Question from '../components/Question';
-import ScoreBoard from '../components/ScoreBoard';
 import SubmitAnswer from '../components/SubmitAnswer';
 import Result from '../components/Result';
+// import Popup from '../components/Popup';
 import './Quiz.css';
 
 class Quiz extends React.Component {
@@ -60,6 +60,17 @@ class Quiz extends React.Component {
 
   render(){
 
+    // const popupMessage = () => {
+    //   return (
+    //     <h2
+    //       id="question-result"
+    //       className={this.state.resultVisible}>
+    //       {this.state.resultText}
+    //     </h2>
+    //   )
+    // }
+
+    // const popupElements = [popupMessage()];
 
     const questionElements = () => {
       return (
@@ -73,12 +84,18 @@ class Quiz extends React.Component {
           <SubmitAnswer
             class={this.state.nextButtonVisible}
             handleClick={this.handleSubmit} />
-            <Result
-              class={this.state.resultVisible}
-              text={this.state.resultText} />
-            </React.Fragment>
-          )
-        }
+            {/* WORKING ON THIS AS OF NOON Thursday */}
+          {/* <Popup
+            class={this.state.resultVisible}
+            paras={popupElements}
+            id='quiz-popup'
+          /> */}
+          <Result
+            class={this.state.resultVisible}
+            text={this.state.resultText} />
+        </React.Fragment>
+      )
+    }
 
 
     return(
