@@ -178,8 +178,8 @@ class Game extends React.Component {
     this.state.isWon ? popupMessage = completeMessage : popupMessage = tryAgainMessage
 
     const gameInstructions = [
-      'Draw Divvy\'s route home by clicking the arrows in the right order.',
-      'To move 2 squares right, click right 2 times.'
+      'Draw Divvy\'s route home by clicking the arrows in the correct order.',
+      'For example, to move 2 squares up, click the up arrow 2 times.'
     ]
 
     return (
