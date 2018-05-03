@@ -3,17 +3,15 @@ import './Popup.css'
 
 const Popup = (props) => {
 
-  // const elements = props.paras.map()
+  const elements = props.paras.map((para, index) => {
+    return <p key={index}>{para}</p>
+  })
 
-  let popupClass = "popup hidden";
-
-  if(props.class){
-    popupClass = "popup " + props.class;
-  }
+  const popupClass = "popup " + props.class;
 
   return (
-    <div className="popup hidden">
-      <h1>I am a popup</h1>
+    <div className={popupClass}>
+      {elements}
     </div>
   )
 }
