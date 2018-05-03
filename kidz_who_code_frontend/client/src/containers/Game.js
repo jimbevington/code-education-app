@@ -13,16 +13,6 @@ import './Game.css';
 class Game extends React.Component {
   constructor(props){
     super(props);
-    // this.blankSettings = {
-    //   gridSize: (this.props.squaredSize ** 2) - 1,
-    //   isWon: false,
-    //   cellStates: [],
-    //   goalPosition: null,
-    //   playerPosition: null,
-    //   moveList: [],
-    //   moveDirList: [],
-    //   popupClass: 'hidden'
-    // }
     this.state = {
       gridSize: (this.props.squaredSize ** 2) - 1,
       isWon: false,
@@ -153,6 +143,7 @@ class Game extends React.Component {
 
   resetGame(){
     this.setState(
+      // not very DRY but running out of time and alternatives not working
       {
         gridSize: (this.props.squaredSize ** 2) - 1,
         isWon: false,
