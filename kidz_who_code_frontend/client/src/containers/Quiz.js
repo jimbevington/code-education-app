@@ -27,23 +27,14 @@ class Quiz extends React.Component {
     if(this.state.currentQuestion < this.props.facts[1].q_and_a.length){
       this.setState({nextButtonVisible: 'submit-answer-button'});
       this.setState({resultVisible: 'result-message-hidden'});
-      // if (this.state.currentQuestion === 4) {
-      //   this.setState({nextButtonVisible: 'submit-answer-button'});
-      // }
       this.setState(prevState => ({
         currentQuestion: prevState.currentQuestion + 1,
       }));
     }
-
-    // add/change class on answer text to colour green
-    // display 'next question' button
-    // if incorrect
-    // add/change class on answer text to colour red
-    // allow user to select another answer
   }
 
   handleButtonClick(){
-      this.setState({buttonClass: 'button buttonIncorrect'});
+    this.setState({buttonClass: 'button buttonIncorrect'});
   }
 
   handleAnswerClick(e){
@@ -81,13 +72,12 @@ class Quiz extends React.Component {
           <SubmitAnswer
             class={this.state.nextButtonVisible}
             handleClick={this.handleSubmit} />
-          <Result
-            class={this.state.resultVisible}
-            text={this.state.resultText} />
-        </React.Fragment>
-      )
-    }
-
+            <Result
+              class={this.state.resultVisible}
+              text={this.state.resultText} />
+            </React.Fragment>
+          )
+        }
 
 
     return(
