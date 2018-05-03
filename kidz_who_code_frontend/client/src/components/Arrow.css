@@ -29,7 +29,7 @@
 }
 
 .arrow-link:hover {
-  width: 100%;
-  height: 100%;
-  overflow: visible;
+  width: 100px;
+  height: 200px;
+  /* overflow: visible; */
 }
