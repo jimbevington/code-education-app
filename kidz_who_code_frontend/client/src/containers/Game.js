@@ -157,7 +157,12 @@ class Game extends React.Component {
     const completeButton = () => {
       return (
         <a href="#quiz">
-          <button id='next-page-button'>Now, Test Your Knowledge</button>
+          <button
+            id='next-page-button'
+            onClick={this.resetGame}
+          >
+            Now, Test Your Knowledge
+          </button>
         </a>
         )
     }
