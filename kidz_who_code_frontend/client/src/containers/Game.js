@@ -85,7 +85,7 @@ class Game extends React.Component {
     updatedCellState[currentPosition] = null;
     // work out new Player Position
     const updatedPlayerPosition = this.evaluateMoves(currentPosition);
-
+    // 'put' Player in new cell position
     updatedCellState[updatedPlayerPosition] = 'player';
 
     // update State: playerPosition, cellStates, moveList, moveDirlist
