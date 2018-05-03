@@ -5,32 +5,20 @@ import SpeechBubble from './SpeechBubble';
 import LinkImage from './LinkImage';
 import codeclan from './public/codeclan-logo.png';
 import Certificate from "./public/Certificate.png";
-// import './Bye.css'
+import InfoBox from './InfoBox';
+import './Bye.css';
 
-const Bye = () => {
-
-  // const wellDone = 'Well Done! You\'re now a Junior Developer!';
-  // const signUp = 'You\'re ready for your next challenge';
-  //
-  // const bubbleContents = [wellDone, signUp];
+const Bye = (props) => {
 
   return (
     <section id="bye" className="byepage">
       <header>
         <Arrow direction='upArrow' link='#quiz' />
       </header>
+      <h4 id="user-cert">{props.userName}</h4>
       <Alien floatStyle="float-none" class='alienpic'/>
-
-      {/* <section className='column' style={{'alignSelf': 'center'}}>
-        <SpeechBubble paras={bubbleContents} width='300px'/> */}
-        {/* <LinkImage
-          href="https://codeclan.com/"
-          img={codeclan}
-          alt="Codeclan Logo"
-          width='400px'
-        />
-      </section>*/}
       <Arrow direction="rightArrow" link='#intro-page' />
+
     </section>
   )
 }

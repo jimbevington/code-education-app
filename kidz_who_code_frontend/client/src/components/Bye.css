@@ -1,0 +1,17 @@
+#user-cert {
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  left: 25%;
+  top: 45%;
+}
+
+
+
+h4 {
+  font-family: 'Gugi', cursive;
+  font-size: 45px;
+  line-height: 200px;
+  position: absolute;
+
+}
