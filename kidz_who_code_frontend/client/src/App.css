@@ -55,6 +55,28 @@ input[type='text'] {
   background-color: #87CEFA;
 }
 
+.byepage {
+  min-height: 650px;
+  max-height: 650px;
+  min-width: 1100px;
+  max-width: 1100px;
+  margin: 50px 0px;
+  display: flex;
+  flex-flow: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  border: solid 3px lightgrey;
+  border-radius: 80px;
+  background-image: url("./components/public/Certificate.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+
+}
+
+
 .float-left {
   float: left;
 }

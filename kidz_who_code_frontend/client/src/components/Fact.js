@@ -25,7 +25,7 @@ const Fact = (props) => {
     <section id="fact-page" className='page' >
 
       <header>
-        <Arrow direction="upArrow" link="Intro"/>
+        <Arrow direction="upArrow" link="#intro-page"/>
         {/* <h1>Fun Facts!</h1> */}
         <SpeechBubble
           paras={speechBubbleContents}
@@ -45,7 +45,7 @@ const Fact = (props) => {
         <br />
         <Bug facts={props} />
       </section>
-      <Arrow direction="downArrow" link="Game"/>
+      <Arrow direction="downArrow" link="#game"/>
     </section>
   );
 

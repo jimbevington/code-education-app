@@ -18,18 +18,21 @@ const Question = (props) => {
       <button
         className="button"
         onClick={props.handleAnswerClick}
+        id="answer-button"
         value={correctAnswer}>
         {correctAnswer}
       </button>
       <button
         className="button"
         onClick={props.handleAnswerClick}
+        id="answer-button"
         value={incorrectAnswer1}>
         {incorrectAnswer1}
       </button>
       <button
         className="button"
         onClick={props.handleAnswerClick}
+        id="answer-button"
         value={incorrectAnswer2}>
         {incorrectAnswer2}
       </button>
