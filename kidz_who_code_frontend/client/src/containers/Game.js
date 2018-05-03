@@ -49,8 +49,7 @@ class Game extends React.Component {
   }
 
   generateGoalPosition = (posToAvoid) => {
-    // const goalPos = generateGridPos();
-    // make this more sophisticated LATER
+    //  ***  SHOULD BE MORE SOPHISTICATED  ***
     let goalPos = posToAvoid + (this.props.squaredSize * 1.5);
     if (goalPos > this.state.gridSize){
       goalPos -= this.state.gridSize;
@@ -64,10 +63,11 @@ class Game extends React.Component {
     if(this.state.isWon){
       return;
     }
-
+    // get move VALUE from Move, add to moveList
     const updatedMoves = this.state.moveList;
     updatedMoves.push(event.target.getAttribute('value'));
     const updatedDirMoves = this.state.moveDirList;
+    // get move DIRECTION from Move, add to MoveDirList
     updatedDirMoves.push(event.target.getAttribute('direction'));
     this.setState({moveList: updatedMoves, moveDirList: updatedDirMoves});
   }
@@ -77,13 +77,13 @@ class Game extends React.Component {
     if(!this.state.moveList.length){
       return;
     }
-
+    // get vars to update
     let updatedCellState = this.state.cellStates;
     let currentPosition = this.state.playerPosition;
 
     // clear Player position
     updatedCellState[currentPosition] = null;
-
+    // work out new Player Position
     const updatedPlayerPosition = this.evaluateMoves(currentPosition);
 
     updatedCellState[updatedPlayerPosition] = 'player';
@@ -103,10 +103,11 @@ class Game extends React.Component {
     // loop through all the moves
     for (let move of this.state.moveList){
       const intMove = parseInt(move, 10);
-      // set controls based on
+
+      // boolean tests to see if at boundaries
       const atLeftBoundary = updatedPos % this.props.squaredSize === 0;
       const atRightBoundary = (updatedPos + 1) % this.props.squaredSize === 0;
-      // debugger;
+
       // skip move if Player can't move LEFT
       if(atLeftBoundary && intMove === -1){
         continue;
@@ -117,12 +118,12 @@ class Game extends React.Component {
       }
       // calculate what the new Position will be
       const newPos = updatedPos + intMove;
+
       // update the Position if in range of the board
       if(newPos < this.state.gridSize && newPos >= 0){
         updatedPos = newPos;
       }
     }
-
     return updatedPos;
   }
 
