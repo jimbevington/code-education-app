@@ -49,7 +49,6 @@ class Game extends React.Component {
   }
 
   generateGoalPosition = (posToAvoid) => {
-    // const goalPos = generateGridPos();
     // make this more sophisticated LATER
     let goalPos = posToAvoid + (this.props.squaredSize * 1.5);
     if (goalPos > this.state.gridSize){
