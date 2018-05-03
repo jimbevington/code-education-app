@@ -10,7 +10,7 @@ const Popup = (props) => {
   const popupClass = "popup " + props.class;
 
   return (
-    <div className={popupClass}>
+    <div className={popupClass} id={props.id}>
       {elements}
     </div>
   )

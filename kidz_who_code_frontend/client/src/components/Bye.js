@@ -1,11 +1,6 @@
 import React from 'react';
 import Arrow from './Arrow';
 import Alien from './Alien';
-import SpeechBubble from './SpeechBubble';
-import LinkImage from './LinkImage';
-import codeclan from './public/codeclan-logo.png';
-import Certificate from "./public/Certificate.png";
-import InfoBox from './InfoBox';
 import './Bye.css';
 
 const Bye = (props) => {
