@@ -17,7 +17,7 @@ const Bye = () => {
   return (
     <section id="bye" className="byepage">
       <header>
-        <Arrow direction='upArrow' link='Quiz' />
+        <Arrow direction='upArrow' link='#quiz' />
       </header>
       <Alien floatStyle="float-none" class='alienpic'/>
 
@@ -28,9 +28,9 @@ const Bye = () => {
           img={codeclan}
           alt="Codeclan Logo"
           width='400px'
-        /> */}
-      {/* </section> */}
-      <Arrow direction="rightArrow" link='Intro' />
+        />
+      </section>
+      <Arrow direction="rightArrow" link='#intro-page' />
     </section>
   )
 }

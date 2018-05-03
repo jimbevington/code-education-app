@@ -93,7 +93,7 @@ class Quiz extends React.Component {
     return(
       <section id="quiz" className='page'>
         <header>
-          <Arrow direction="upArrow" link="Facts" />
+          <Arrow direction="upArrow" link="#game" />
           <Heading text='Quiz' />
         </header>
         <Alien floatStyle="float-none" class='alienpic'/>
@@ -103,7 +103,7 @@ class Quiz extends React.Component {
             height='400px'
           />
         </div>
-        <Arrow direction="downArrow" link="Quiz" />
+        <Arrow direction="downArrow" link="#bye" />
       </section>
       )
       }
