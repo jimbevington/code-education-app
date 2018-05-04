@@ -12,7 +12,7 @@ const Bye = (props) => {
       </header>
       <h4 id="user-cert">{props.userName}</h4>
       <Alien floatStyle="float-none" class='alienpic'/>
-      <Arrow direction="rightArrow" link='#intro-page' />
+      <Arrow direction="rightArrow" link='/' />
 
     </section>
   )
