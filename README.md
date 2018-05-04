@@ -10,6 +10,8 @@ To get up and running:
 
 - in another terminal tab cd into kidz_who_code_frontend/client
 
+- npm install
+
 - npm start
 
 - the endpoint for the json is http://localhost:3001/facts
